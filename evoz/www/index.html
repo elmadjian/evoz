@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+    	ons.platform.select('android');
+      ons.ready(function() {
+        window.fn = {};
+
+        window.fn.open = function() {
+          var menu = document.getElementById('menu');
+          menu.open();
+        };
+
+        window.fn.load = function(page) {
+          var content = document.getElementById('content');
+          var menu = document.getElementById('menu');
+          content.load(page).then(menu.close.bind(menu));
+        };
+
+        $(document).on('pinchout', '#mapa', function() {
+          var curr_width = $('#mapa').width();
+          $('#mapa').width(curr_width+5);
+        });
+
+        $(document).on('pinchin', '#mapa', function() {
+          var curr_width = $('#mapa').width();
+          $('#mapa').width(curr_width-5);
+        });
+      });
+
+    </script>
+</head>
+
+<body>
+
+
+<!-- MENU LATERAL -->
+<!------------------>
+<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="80%" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('propostas.html')" tappable> Propostas </ons-list-item>
+        <ons-list-item onclick="fn.load('problemas.html')" tappable> Problemas </ons-list-item>
+        <ons-list-item onclick="fn.load('categorias.html')" tappable> Categorias </ons-list-item>
+        <ons-list-item onclick="fn.load('lideres.html')" tappable> Líderes </ons-list-item>
+        <ons-list-item onclick="fn.load('estatisticas.html')" tappable> Estatísticas </ons-list-item>
+        <ons-list-item onclick="fn.load('ajuda.html')" tappable> Ajuda </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="propostas.html"></ons-splitter-content>
+</ons-splitter>
+
+
+<!-- PÁGINA PROPOSTAS -->
+<!---------------------->
+<ons-template id="propostas.html">
+  <ons-page>
+    <ons-toolbar fixed-style>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">e-Voz</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <ons-icon icon="md-search"></ons-icon>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <ons-icon icon="md-more-vert"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    <!-- Título -->
+    <ons-row>
+      <ons-col width="25%" class="title-left">
+      </ons-col>
+      <ons-col width="50%" class="title-center">
+        Propostas
+      </ons-col>
+      <ons-col width="25%" class="title-right">
+        <ons-icon icon="md-chevron-right" onclick="fn.load('problemas.html')" tappable swipeable></ons-icon>
+      </ons-col>
+    </ons-row>
+
+    <!-- Lista de propostas -->
+    <ons-list>
+      <ons-list-item>Item A</ons-list-item>
+      <ons-list-item>Item B</ons-list-item>
+      <ons-list-item>Item C</ons-list-item>
+      <ons-list-item>Item D</ons-list-item>
+      <ons-list-item>Item E</ons-list-item>
+      <ons-list-item>Item F</ons-list-item>
+      <ons-list-item>Item G</ons-list-item>
+      <ons-list-item>Item H</ons-list-item>
+      <ons-list-item>Item I</ons-list-item>
+    </ons-list>
+
+
+    <!-- Botão + -->
+    <ons-fab position="bottom right">
+      <ons-icon icon="md-plus"></ons-icon>
+    </ons-fab>
+  </ons-page>
+</ons-template>
+
+
+
+<!-- PÁGINA PROBLEMAS -->
+<!---------------------->
+<ons-template id="problemas.html">
+  <ons-page>
+    <ons-toolbar fixed-style>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">e-Voz</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <ons-icon icon="md-search"></ons-icon>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <ons-icon icon="md-more-vert"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    <!-- Título -->
+    <ons-row>
+      <ons-col width="25%" class="title-left">
+        <ons-icon icon="md-chevron-left" onclick="fn.load('propostas.html')" tappable swipeable></ons-icon>
+      </ons-col>
+      <ons-col width="50%" class="title-center">
+        Problemas
+      </ons-col>
+      <ons-col width="25%" class="title-right">
+        <ons-icon icon="md-chevron-right" onclick="fn.load('categorias.html')" tappable swipeable></ons-icon>
+      </ons-col>
+    </ons-row>
+
+    <!-- Mapa de SP  -->
+    <ons-gesture-detector>
+      <div>
+        <img id="mapa" src="imgs/mapa.png"></img>
+      </div>
+    </ons-gesture-detector>
+
+    <ons-fab position="bottom right">
+      <ons-icon icon="md-plus"></ons-icon>
+    </ons-fab>
+  </ons-page>
+</ons-template>
+
+
+<!-- PÁGINA CATEGORIAS -->
+<!----------------------->
+<ons-template id="categorias.html">
+  <ons-page>
+    <ons-toolbar fixed-style>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">e-Voz</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <ons-icon icon="md-search"></ons-icon>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <ons-icon icon="md-more-vert"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    <!-- Título -->
+    <ons-row>
+      <ons-col width="25%" class="title-left">
+        <ons-icon icon="md-chevron-left" onclick="fn.load('problemas.html')" tappable swipeable></ons-icon>
+      </ons-col>
+      <ons-col width="50%" class="title-center">
+        Categorias
+      </ons-col>
+      <ons-col width="25%" class="title-right">
+        <ons-icon icon="md-chevron-right" onclick="fn.load('lideres.html')" tappable swipeable></ons-icon>
+      </ons-col>
+    </ons-row>
+
+  </ons-page>
+</ons-template>
+
+
+<!-- PÁGINA LÍDERES -->
+<!-------------------->
+<ons-template id="lideres.html">
+  <ons-page>
+    <ons-toolbar fixed-style>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">e-Voz</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <ons-icon icon="md-search"></ons-icon>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <ons-icon icon="md-more-vert"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    <!-- Título -->
+    <ons-row>
+      <ons-col width="25%" class="title-left">
+        <ons-icon icon="md-chevron-left" onclick="fn.load('categorias.html')" tappable swipeable></ons-icon>
+      </ons-col>
+      <ons-col width="50%" class="title-center">
+        Líderes
+      </ons-col>
+      <ons-col width="25%" class="title-right">
+        <ons-icon icon="md-chevron-right" onclick="fn.load('estatisticas.html')" tappable swipeable></ons-icon>
+      </ons-col>
+    </ons-row>
+
+  </ons-page>
+</ons-template>
+
+
+<!-- PÁGINA ESTATÍSTICAS -->
+<!------------------------->
+<ons-template id="estatisticas.html">
+  <ons-page>
+    <ons-toolbar fixed-style>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">e-Voz</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <ons-icon icon="md-search"></ons-icon>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <ons-icon icon="md-more-vert"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    <!-- Título -->
+    <ons-row>
+      <ons-col width="25%" class="title-left">
+        <ons-icon icon="md-chevron-left" onclick="fn.load('lideres.html')" tappable swipeable></ons-icon>
+      </ons-col>
+      <ons-col width="50%" class="title-center">
+        Estatísticas
+      </ons-col>
+      <ons-col width="25%" class="title-right">
+        <ons-icon icon="md-chevron-right" onclick="fn.load('ajuda.html')" tappable swipeable></ons-icon>
+      </ons-col>
+    </ons-row>
+
+  </ons-page>
+</ons-template>
+
+
+<!-- PÁGINA AJUDA -->
+<!------------------>
+<ons-template id="ajuda.html">
+  <ons-page>
+    <ons-toolbar fixed-style>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">e-Voz</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <ons-icon icon="md-search"></ons-icon>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <ons-icon icon="md-more-vert"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    <!-- Título -->
+    <ons-row>
+      <ons-col width="25%" class="title-left">
+        <ons-icon icon="md-chevron-left" onclick="fn.load('estatisticas.html')" tappable swipeable></ons-icon>
+      </ons-col>
+      <ons-col width="50%" class="title-center">
+        Ajuda
+      </ons-col>
+      <ons-col width="25%" class="title-right">
+      </ons-col>
+    </ons-row>
+
+  </ons-page>
+</ons-template>
+
+</body>
+</html>
