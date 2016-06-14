@@ -3,25 +3,30 @@
 /* Title page */
 /* ---------- */
 .title-center {
-  padding: 20px;
-  font-size: 120%;
-  text-align: center;
+    padding: 20px;
+    font-size: 120%;
+    text-align: center;
 }
 
 .title-left {
-  padding: 20px 15px;
-  font-size: 120%;
-  text-align: left;
+    padding: 20px 15px;
+    font-size: 120%;
+    text-align: left;
 }
 
 .title-right {
-  padding: 20px 15px;
-  font-size: 120%;
-  text-align: right;
+    padding: 20px 15px;
+    font-size: 120%;
+    text-align: right;
 }
 
 /* SP map */
 /* ------ */
+.map_style {
+    height: 450px;
+    width: 100%;
+    position:absolute;
+}
 
 
 
