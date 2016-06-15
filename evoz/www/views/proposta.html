@@ -1,0 +1,95 @@
+<!--  PÁGINA GRAVAÇÃO DE PROPOSTA  -->
+<!----------------------------------->
+
+<script>
+    $('#textarea1').val('New Text');
+    $('#textarea1').trigger('autoresize');
+
+</script>
+
+<ons-page>
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">e-Voz</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="md-search"></ons-icon>
+            </ons-toolbar-button>
+            <ons-toolbar-button>
+                <ons-icon icon="md-more-vert"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <!-- Título  -->
+    <ons-row>
+        <ons-col width="75%" vertical-align="center" style="margin-left:25%;">
+            <img src="imgs/idea.jpg" class="list__item__thumbnail" style="float:left;">
+            <p style="font-size: 120%; text-align: center; float:left;">Nova Proposta </p>
+        </ons-col>
+    </ons-row>
+
+    <!-- Formulário  -->
+    <ons-row vertical-align="center" style="width:80%; margin: 3% 10%">
+        <div class="input-field col s12">
+          <input type="text" class="validate">
+          <label for="first_name">Título da Proposta</label>
+        </div>
+        <ons-button modifier="quiet" style="font-size:150%;">
+            <ons-icon icon="md-mic" ></ons-icon>
+        </ons-button>
+    </ons-row>
+    <p></p>
+
+    <ons-row>
+        <ons-col width="65%" style="margin: 0 10%;" class="input-field col s12">
+                <textarea id="ideia" class="materialize-textarea" rows="5"></textarea>
+                <label for="ideia">Ideia</label>
+        </ons-col>
+        <ons-col vertical-align="center">
+            <ons-button modifier="quiet" style="float:left; font-size:150%;">
+                <ons-icon icon="md-mic"></ons-icon>
+            </ons-button>
+        </ons-col>
+    </ons-row>
+
+
+    <ons-row style="width:80%; margin: 6% 10%;">
+        <ons-col width="40%">
+            <ons-icon icon="md-apps"></ons-icon>
+            <label for="location" style="font-size:100%;">Categoria: </label>
+        </ons-col>
+        <ons-col width="30%">
+            <ons-button onclick="dropdown('#location')">Automático
+                <ons-icon icon="md-chevron-down"></ons-icon>
+            </ons-button>
+            <ons-list id='location' class="dropdown-content">
+                <ons-list-item tappable onclick="hide('#location')">Aqui</ons-list-item>
+                <ons-list-item tappable onclick="hide('#location')">Outra...</ons-list-item>
+            </ons-list>
+        </ons-col>
+    </ons-row>
+     <ons-row style="width:80%; margin: 6% 10%;">
+        <ons-col width="40%">
+            <ons-icon icon="md-file-plus"></ons-icon>
+            <label for="time_event" style="font-size:100%;">Anexar: </label>
+        </ons-col>
+        <ons-col width="20%">
+            <ons-fab class="tiny-fab">
+                <ons-icon icon="md-camera"></ons-icon>
+            </ons-fab>
+        </ons-col>
+        <ons-col width="20%">
+            <ons-fab class="tiny-fab">
+                <ons-icon icon="md-videocam"></ons-icon>
+            </ons-fab>
+        </ons-col>
+    </ons-row>
+    <ons-button class="bottom-right">Enviar</ons-button>
+
+
+</ons-page>

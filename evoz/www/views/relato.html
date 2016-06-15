@@ -1,0 +1,90 @@
+<!--  PÁGINA GRAVAÇÃO DE RELATO  -->
+<!--------------------------------->
+
+<script>
+    $('#textarea1').val('New Text');
+    $('#textarea1').trigger('autoresize');
+
+</script>
+
+<ons-page>
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">e-Voz</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="md-search"></ons-icon>
+            </ons-toolbar-button>
+            <ons-toolbar-button>
+                <ons-icon icon="md-more-vert"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <!-- Media buttons  -->
+    <ons-row vertical-align="center">
+        <ons-col width="35%">
+            <ons-fab class="big-fab">
+                <ons-icon icon="md-mic"></ons-icon>
+            </ons-fab>
+        </ons-col>
+        <ons-col width="20%">
+            <ons-fab class="small-fab">
+                <ons-icon icon="md-camera"></ons-icon>
+            </ons-fab>
+        </ons-col>
+        <ons-col width="20%">
+            <ons-fab class="small-fab">
+                <ons-icon icon="md-videocam"></ons-icon>
+            </ons-fab>
+        </ons-col>
+    </ons-row>
+    <p></p>
+    <div class="textfield">
+        <div class="input-field col s12">
+            <textarea id="relato" class="materialize-textarea"></textarea>
+            <label for="relato">Relato</label>
+        </div>
+    </div>
+    <ons-row style="width:80%; margin: 3% 10%;">
+        <ons-col width="40%">
+            <ons-icon icon="md-pin"></ons-icon>
+            <label for="location" style="font-size:100%;">Localização: </label>
+        </ons-col>
+        <ons-col width="30%">
+            <ons-button onclick="dropdown('#location')">Aqui
+                <ons-icon icon="md-chevron-down"></ons-icon>
+            </ons-button>
+            <ons-list id='location' class="dropdown-content">
+                <ons-list-item tappable onclick="hide('#location')">Aqui</ons-list-item>
+                <ons-list-item tappable onclick="hide('#location')">Outra...</ons-list-item>
+            </ons-list>
+        </ons-col>
+    </ons-row>
+     <ons-row style="width:80%; margin: 3% 10%;">
+        <ons-col width="40%">
+            <ons-icon icon="md-time"></ons-icon>
+            <label for="time_event" style="font-size:100%;">Horário: </label>
+        </ons-col>
+        <ons-col width="30%">
+            <ons-button onclick="dropdown('#time_event')">Agora
+                <ons-icon icon="md-chevron-down"></ons-icon>
+            </ons-button>
+            <ons-list id='time_event' class="dropdown-content">
+                <ons-list-item tappable onclick="hide('#time_event')">Agora</ons-list-item>
+                <ons-list-item tappable onclick="hide('#time_event')">Há 30 min.</ons-list-item>
+                <ons-list-item tappable onclick="hide('#time_event')">Há 1 hora</ons-list-item>
+                <ons-list-item tappable onclick="hide('#time_event')">Escolher...</ons-list-item>
+            </ons-list>
+        </ons-col>
+    </ons-row>
+    <ons-button class="bottom-right">Enviar</ons-button>
+
+
+</ons-page>
+
+

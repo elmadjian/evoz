@@ -23,10 +23,55 @@
 /* SP map */
 /* ------ */
 .map_style {
-    height: 450px;
+    height: 600px;
     width: 100%;
     position:absolute;
 }
+
+/* Big fab buttons */
+/* --------------- */
+.big-fab {
+    padding: 12px;
+    font-size: 200%;
+    width: 80px;
+    height: 80px;
+    margin: 20% 20%;
+}
+
+.small-fab {
+    top: 7%;
+}
+
+.tiny-fab {
+    width:50px;
+    height:50px;
+    font-size:120%;
+    margin-top:-10px;
+}
+
+.textfield {
+    width: 80%;
+    height: 150px;
+    margin: 0 10%;
+}
+
+/* dropdown options */
+/* ---------------- */
+.dropdown-layout {
+    z-index: 12;
+    position: absolute;
+    min-width: 30%;
+}
+
+/* layout positioning */
+/* ------------------ */
+.bottom-right {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+
 
 
 
