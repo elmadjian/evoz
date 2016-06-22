@@ -1,49 +1,105 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
+
     <head>
         <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+Customize this policy to fit your own app's needs. For more guidance, see:
+https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+Some notes:
+* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+* Enable inline JS: add 'unsafe-inline' to default-src
+-->
+        <meta charset="utf-8">
+        <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <link rel="stylesheet" href="css/materialize.css">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+        <title>eVoz</title>
     </head>
+
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <script>
+
+            $(document).ready(function () {
+                //trigger do menu lateral
+                $('.button-collapse').sideNav({
+                    menuWidth: 280, // Default is 240
+                    closeOnClick: true
+                });
+                $('.collapsible').collapsible();
+
+                //trigger das abas
+                $('ul.tabs').tabs();
+            });
+
+            //carrega o mapa no centro de SP
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -23.6126467, lng: -46.5811282},
+                    zoom:11,
+                    streetViewControl: false,
+                    zoomControl: false
+                });
+            }
+        </script>
+        <!-- Barra de navegação -->
+        <nav>
+            <div class="brand-logo center">eVoz</div>
+            <ul id="slide-out" class="side-nav">
+                <li><a href="views/conta.html">Fulano</a></li><div class="divider"></div>
+                <li><a href="index.html">Problemas</a></li>
+                <li><a href="views/categorias.html">Categorias</a></li>
+                <li><a href="views/lideres.html">Líderes</a></li>
+                <li><a href="views/estatisticas.html">Estatísticas</a></li>
+                <li><a href="views/ajuda.html">Ajuda</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        </nav>
+
+
+        <!-- Título -->
+        <div class="container blue lighten-3">
+            <div class="row titulo">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col"><a href="#"><i class="material-icons medium">room</i><br>Problemas</a></li>
+                        <li class="tab col"><a href="#"><i class="material-icons medium">layers</i><br>Categorias</a></li>
+                        <li class="tab col"><a href="#"><i class="material-icons medium">group</i><br>Líderes</a></li>
+                        <li class="tab col"><a href="#"><i class="material-icons medium">poll</i><br>Estatísticas</a></li>
+                        <!--                        <li class="tab col"><a href="#"><i class="material-icons medium">help</i><br>Ajuda</a></li>-->
+                    </ul>
+                </div>
             </div>
         </div>
+
+
+
+        <!-- Mapa de SP  -->
+        <div class="row">
+            <div id="map" class="map-style"></div>
+        </div>
+
+
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large waves-effect waves-light">
+                <i class="large material-icons">add</i>
+            </a>
+        </div>
+
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
     </body>
 </html>
