@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+        <script src="components/loader.js"></script>
+        <script src="lib/jquery-3.0.0.min.js"></script>
+        <script src="lib/onsenui/js/onsenui.min.js"></script>
+        <script src="lib/gmaps_estatico.js" async defer></script>
+        <script src="lib/materialize.min.js"></script>
+
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="components/loader.css">
+        <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+        <link rel="stylesheet" href="css/style.css">
+
+
+        <script>
+            ons.platform.select('android');
+            ons.ready(function() {
+                window.fn = {};
+
+                window.fn.open = function() {
+                    var menu = document.getElementById('menu');
+                    menu.open();
+                };
+
+                window.fn.load = function(page) {
+                    var content = document.getElementById('content');
+                    var menu = document.getElementById('menu');
+                    content.load(page).then(menu.close.bind(menu));
+                    if (page == 'views/problemas.html') {
+                        $(document).ready(function() {
+                            setTimeout(initMap, 100);
+                        });
+                    }
+                };
+            });
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -23.6126467, lng: -46.5811282},
+                    zoom:11,
+                    streetViewControl: false,
+                    zoomControl: false
+                });
+            }
+
+            var dropdown = function(element){
+                $(element).removeClass("dropdown-content");
+                $(element).addClass("z-depth-2 dropdown-layout");
+            }
+
+            var hide = function(element) {
+                $(element).removeClass("z-depth-2");
+                $(element).addClass("dropdown-content");
+            }
+
+
+        </script>
+    </head>
+
+    <body ng-app="">
+
+
+        <!-- MENU LATERAL -->
+        <!------------------>
+        <ons-splitter>
+            <ons-splitter-side id="menu" side="left" width="80%" swipe-target-width="30px" collapse swipeable>
+                <ons-page>
+                    <ons-list>
+                        <ons-list-item onclick="fn.load('views/propostas.html')" tappable> Propostas </ons-list-item>
+                        <ons-list-item onclick="fn.load('views/problemas.html')" tappable> Problemas </ons-list-item>
+                        <ons-list-item onclick="fn.load('views/categorias.html')" tappable> Categorias </ons-list-item>
+                        <ons-list-item onclick="fn.load('views/lideres.html')" tappable> Líderes </ons-list-item>
+                        <ons-list-item onclick="fn.load('views/estatisticas.html')" tappable> Estatísticas </ons-list-item>
+                        <ons-list-item onclick="fn.load('views/ajuda.html')" tappable> Ajuda </ons-list-item>
+                    </ons-list>
+                </ons-page>
+            </ons-splitter-side>
+            <ons-splitter-content id="content" page="views/propostas.html"></ons-splitter-content>
+        </ons-splitter>
+
+    </body>
+</html>
