@@ -44,14 +44,25 @@ Some notes:
             });
 
             //carrega o mapa no centro de SP
+            
+            var map;
             function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
+                map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: -23.6126467, lng: -46.5811282},
                     zoom:11,
                     streetViewControl: false,
                     zoomControl: false
                 });
             }
+            
+//            function carregaBairros() {
+//                console.log("entrei aqui");
+//                var ctaLayer = new google.maps.KmlLayer({
+//                    url: "file:///home/cadu/Dropbox/MAC5786/Projeto/evoz/evoz/www/lib/bairros_capped.kml",
+//                    map: map,
+//                    zIndex: 10
+//                });
+//            }
         </script>
         <!-- Barra de navegação -->
         <nav>
