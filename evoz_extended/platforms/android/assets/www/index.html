@@ -57,7 +57,8 @@ Some notes:
                     center: {lat: -23.6126467, lng: -46.5811282},
                     zoom:11,
                     streetViewControl: false,
-                    zoomControl: false
+                    zoomControl: false,
+                    mapTypeControl:false
                 });
 
                 recorrencias = new google.maps.KmlLayer({
@@ -81,25 +82,40 @@ Some notes:
                     lista[i].setMap(null);
             }
 
+            function alteraCard(card, lista) {
+                for (var i in lista)
+                    $(lista[i]).css('display', 'none');
+                $(card).fadeIn(1200);
+            }
+            
+            function alteraLegenda(legenda, lista) {
+                for (var i in lista)
+                    $(lista[i]).css('display', 'none');
+                $(legenda).fadeIn(1200);
+            }
+
             //carrega estat1            
             function carregaRecorrencias() {
                 recorrencias.setMap(map);
                 escondeCamada([resolucoes, rendas]);
-                Materialize.toast("Mapa dos problemas mais recorrentes", 4000);
+                alteraCard('#recor_card', ['#resol_card', '#renda_card']);
+                alteraLegenda('#legenda1', ['#legenda2', '#legenda3']);
             }
 
             //carrega estat2
             function carregaResolucoes() {
                 resolucoes.setMap(map); 
                 escondeCamada([recorrencias, rendas]);
-                Materialize.toast("Mapa da resolução dos problemas", 4000);
+                alteraCard('#resol_card', ['#recor_card', '#renda_card']);
+                alteraLegenda('#legenda2', ['#legenda1', '#legenda3']);
             }
 
             //carregar estat3
             function carregaRendas() {
                 rendas.setMap(map);
                 escondeCamada([recorrencias, resolucoes]);
-                Materialize.toast("Mapa da distribuição de renda", 4000);
+                alteraCard('#renda_card', ['#resol_card', '#recor_card']);
+                alteraLegenda('#legenda3', ['#legenda2', '#legenda1']);
             }
 
             //carrega estat2
@@ -144,6 +160,11 @@ Some notes:
         <!-- Mapa de SP  -->
         <div class="row">
             <div id="map" class="map-style"></div>
+            <div class="container">
+                <div id="recor_card" class="card-panel white">Mapa de recorrência dos problemas</div>
+                <div id="resol_card" class="card-panel white">Mapa de resoluções dos problemas</div>
+                <div id="renda_card" class="card-panel white">Mapa da distribuição de renda</div>
+            </div>
         </div>
 
         <!-- Menu de estatísticas -->
@@ -164,6 +185,13 @@ Some notes:
             <a class="btn-floating btn-large waves-effect waves-light" style="bottom: 10px">
                 <i class="large material-icons">add</i>
             </a>
+        </div>
+
+        <!-- Legenda das estatísticas -->
+        <div class="">
+            <img id="legenda1" class="materialboxed z-depth-1" src="img/barra_recorrencia.png" width="60%">
+            <img id="legenda2" class="materialboxed z-depth-1" src="img/problemas.png" width="35%">
+            <img id="legenda3" class="materialboxed z-depth-1" src="img/renda.png" width="35%">
         </div>
 
 

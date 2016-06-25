@@ -33,7 +33,6 @@ Some notes:
 
             //funções
             //===============
-
             $(document).ready(function () {
                 //trigger do menu lateral
                 $('.button-collapse').sideNav({
@@ -46,12 +45,13 @@ Some notes:
                 $('ul.tabs').tabs();
             });
 
-            //carrega o mapa no centro de SP
             var map;
             var recorrencias;
             var resolucoes;
             var rendas;
+            var infoCamadas = false;
 
+            //carrega mapa e camadas de visualização
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: -23.6126467, lng: -46.5811282},
@@ -77,33 +77,66 @@ Some notes:
                 });
             }
 
-            function escondeCamada(lista) {
+            //funções auxiliares para mostrar e esconder elementos
+            function alteraCamada(camada, lista) {
                 for (var i in lista)
                     lista[i].setMap(null);
+                camada.setMap(map);
+            }
+
+            function alteraCard(card, lista) {
+                for (var i in lista)
+                    $(lista[i]).css('display', 'none');
+                $(card).fadeIn(1200);
+            }
+            
+            function alteraLegenda(legenda, lista) {
+                for (var i in lista)
+                    $(lista[i]).css('display', 'none');
+                $(legenda).show(300);
+            }
+            
+            function escondeTudo() {
+                var camadas = [recorrencias, resolucoes, rendas];
+                var cards = ['#recor_card', '#resol_card', '#renda_card'];
+                var legendas = ['#legenda1', '#legenda2', '#legenda3'];
+                for (var i = 0; i < camadas.length; i++) {
+                    camadas[i].setMap(null);
+                    $(cards[i]).css('display', 'none');
+                    $(legendas[i]).css('display', 'none');
+                }
             }
 
             //carrega estat1            
             function carregaRecorrencias() {
-                recorrencias.setMap(map);
-                escondeCamada([resolucoes, rendas]);
-                Materialize.toast("Mapa dos problemas mais recorrentes", 4000);
+                alteraCamada(recorrencias, [resolucoes, rendas]);
+                alteraCard('#recor_card', ['#resol_card', '#renda_card']);
+                alteraLegenda('#legenda1', ['#legenda2', '#legenda3']);
             }
 
             //carrega estat2
             function carregaResolucoes() {
-                resolucoes.setMap(map); 
-                escondeCamada([recorrencias, rendas]);
-                Materialize.toast("Mapa da resolução dos problemas", 4000);
+                alteraCamada(resolucoes, [recorrencias, rendas]);
+                alteraCard('#resol_card', ['#recor_card', '#renda_card']);
+                alteraLegenda('#legenda2', ['#legenda1', '#legenda3']);
             }
 
             //carregar estat3
             function carregaRendas() {
-                rendas.setMap(map);
-                escondeCamada([recorrencias, resolucoes]);
-                Materialize.toast("Mapa da distribuição de renda", 4000);
+                alteraCamada(rendas, [recorrencias, resolucoes]);
+                alteraCard('#renda_card', ['#resol_card', '#recor_card']);
+                alteraLegenda('#legenda3', ['#legenda2', '#legenda1']);
             }
 
-            //carrega estat2
+            //gerenciador de display de camadas
+            function gerenciaCamadas() {
+                if (!infoCamadas)
+                    infoCamadas = true;
+                else {
+                    escondeTudo();
+                    infoCamadas = false;
+                }
+            }
 
             //dados estáticos
             //===============
@@ -134,7 +167,6 @@ Some notes:
                         <li class="tab col"><a href="#"><i class="material-icons medium">layers</i><br>Categorias</a></li>
                         <li class="tab col"><a href="#"><i class="material-icons medium">group</i><br>Líderes</a></li>
                         <li class="tab col"><a href="#"><i class="material-icons medium">poll</i><br>Estatísticas</a></li>
-                        <!--                        <li class="tab col"><a href="#"><i class="material-icons medium">help</i><br>Ajuda</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -145,11 +177,16 @@ Some notes:
         <!-- Mapa de SP  -->
         <div class="row">
             <div id="map" class="map-style"></div>
+            <div class="container">
+                <div id="recor_card" class="card-panel white">Número de problemas nos últimos 6 meses</div>
+                <div id="resol_card" class="card-panel white">Resolução dos problemas pela Prefeitura</div>
+                <div id="renda_card" class="card-panel white">Mapa da distribuição de renda</div>
+            </div>
         </div>
 
         <!-- Menu de estatísticas -->
         <div class="fixed-action-btn vertical click-to-toggle" style="bottom: 110px">
-            <a class="btn-floating btn-large">
+            <a class="btn-floating btn-large" onclick="gerenciaCamadas()">
                 <i class="material-icons">poll</i>
             </a>
             <ul>
@@ -165,6 +202,13 @@ Some notes:
             <a class="btn-floating btn-large waves-effect waves-light" style="bottom: 10px">
                 <i class="large material-icons">add</i>
             </a>
+        </div>
+
+        <!-- Legenda das estatísticas -->
+        <div class="">
+            <img id="legenda1" class="materialboxed z-depth-1" src="img/recorrencia.png" width="60%">
+            <img id="legenda2" class="materialboxed z-depth-1" src="img/problemas.png" width="35%">
+            <img id="legenda3" class="materialboxed z-depth-1" src="img/renda.png" width="35%">
         </div>
 
 

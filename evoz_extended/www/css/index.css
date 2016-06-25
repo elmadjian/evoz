@@ -39,3 +39,18 @@ a {
     height: 560px;
     width:100%;
 }
+
+#recor_card, #resol_card, #renda_card {
+    position: absolute;
+    top: 180px;
+    display: none;
+    z-index: 10;
+}
+
+#legenda1, #legenda2, #legenda3 {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    display: none;
+    z-index:10;
+}
