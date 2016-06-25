@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!--
+Customize this policy to fit your own app's needs. For more guidance, see:
+https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+Some notes:
+* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+* Enable inline JS: add 'unsafe-inline' to default-src
+-->
+        <meta charset="utf-8">
+        <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="css/materialize.css">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+        <title>e-Voz</title>
+    </head>
+
+    <body>
+        <script>
+
+            //funções
+            //===============
+
+            $(document).ready(function () {
+                //trigger do menu lateral
+                $('.button-collapse').sideNav({
+                    menuWidth: 280, // Default is 240
+                    closeOnClick: true
+                });
+                $('.collapsible').collapsible();
+
+                //trigger das abas
+                $('ul.tabs').tabs();
+            });
+
+            //carrega o mapa no centro de SP
+            var map;
+            var recorrencias;
+            var resolucoes;
+            var rendas;
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -23.6126467, lng: -46.5811282},
+                    zoom:11,
+                    streetViewControl: false,
+                    zoomControl: false
+                });
+
+                recorrencias = new google.maps.KmlLayer({
+                    url: "http://www.ime.usp.br/~elmad/prototipo/estat1.kml",
+                    zIndex: -10
+                });
+
+                resolucoes = new google.maps.KmlLayer({
+                    url: "http://www.ime.usp.br/~elmad/prototipo/estat2.kml",
+                    zIndex: -10
+                });
+
+                rendas = new google.maps.KmlLayer({
+                    url: "http://www.ime.usp.br/~elmad/prototipo/estat3.kml",
+                    zIndex: -10
+                });
+            }
+
+            function escondeCamada(lista) {
+                for (var i in lista)
+                    lista[i].setMap(null);
+            }
+
+            //carrega estat1            
+            function carregaRecorrencias() {
+                recorrencias.setMap(map);
+                escondeCamada([resolucoes, rendas]);
+                Materialize.toast("Mapa dos problemas mais recorrentes", 4000);
+            }
+
+            //carrega estat2
+            function carregaResolucoes() {
+                resolucoes.setMap(map); 
+                escondeCamada([recorrencias, rendas]);
+                Materialize.toast("Mapa da resolução dos problemas", 4000);
+            }
+
+            //carregar estat3
+            function carregaRendas() {
+                rendas.setMap(map);
+                escondeCamada([recorrencias, resolucoes]);
+                Materialize.toast("Mapa da distribuição de renda", 4000);
+            }
+
+            //carrega estat2
+
+            //dados estáticos
+            //===============
+
+
+        </script>
+        <!-- Barra de navegação -->
+        <nav>
+            <div class="brand-logo center">eVoz</div>
+            <ul id="slide-out" class="side-nav">
+                <li><a href="views/conta.html">Fulano</a></li><div class="divider"></div>
+                <li><a href="index.html">Problemas</a></li>
+                <li><a href="views/categorias.html">Categorias</a></li>
+                <li><a href="views/lideres.html">Líderes</a></li>
+                <li><a href="views/estatisticas.html">Estatísticas</a></li>
+                <li><a href="views/ajuda.html">Ajuda</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        </nav>
+
+
+        <!-- Título -->
+        <div class="container blue lighten-3">
+            <div class="row titulo">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col"><a href="#"><i class="material-icons medium">room</i><br>Problemas</a></li>
+                        <li class="tab col"><a href="#"><i class="material-icons medium">layers</i><br>Categorias</a></li>
+                        <li class="tab col"><a href="#"><i class="material-icons medium">group</i><br>Líderes</a></li>
+                        <li class="tab col"><a href="#"><i class="material-icons medium">poll</i><br>Estatísticas</a></li>
+                        <!--                        <li class="tab col"><a href="#"><i class="material-icons medium">help</i><br>Ajuda</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Mapa de SP  -->
+        <div class="row">
+            <div id="map" class="map-style"></div>
+        </div>
+
+        <!-- Menu de estatísticas -->
+        <div class="fixed-action-btn vertical click-to-toggle" style="bottom: 110px">
+            <a class="btn-floating btn-large">
+                <i class="material-icons">poll</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating blue darken-3" onclick="carregaRecorrencias()"><i class="material-icons">history</i></a></li>
+                <li><a class="btn-floating blue darken-3" onclick="carregaResolucoes()"><i class="material-icons">account_balance</i></a></li>
+                <li><a class="btn-floating blue darken-3" onclick="carregaRendas()"><i class="material-icons">monetization_on</i></a></li>
+            </ul>
+        </div>
+
+
+        <!-- Adicionar um problema -->
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large waves-effect waves-light" style="bottom: 10px">
+                <i class="large material-icons">add</i>
+            </a>
+        </div>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3&callback=initMap" async defer></script>
+    </body>
+</html>

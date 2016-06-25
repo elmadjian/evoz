@@ -55,14 +55,15 @@ Some notes:
                 });
             }
             
-//            function carregaBairros() {
-//                console.log("entrei aqui");
-//                var ctaLayer = new google.maps.KmlLayer({
-//                    url: "file:///home/cadu/Dropbox/MAC5786/Projeto/evoz/evoz/www/lib/bairros_capped.kml",
-//                    map: map,
-//                    zIndex: 10
-//                });
-//            }
+            function carregaBairros() {
+                console.log("entrei aqui");
+                var ctaLayer = new google.maps.KmlLayer({
+                    url: "http://www.ime.usp.br/~elmad/prototipo/estat1.kml",
+                    map: map,
+                    zoom:11,
+                    zIndex: 10
+                });
+            }
         </script>
         <!-- Barra de navegação -->
         <nav>
@@ -103,7 +104,7 @@ Some notes:
 
 
         <div class="fixed-action-btn">
-            <a class="btn-floating btn-large waves-effect waves-light">
+            <a class="btn-floating btn-large waves-effect waves-light" onclick="carregaBairros()">
                 <i class="large material-icons">add</i>
             </a>
         </div>
@@ -111,6 +112,6 @@ Some notes:
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3&callback=initMap" async defer></script>
     </body>
 </html>
