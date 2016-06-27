@@ -50,7 +50,8 @@ Some notes:
             var resolucoes;
             var rendas;
             var infoCamadas = false;
-            var marker_infos = [];
+            var markers = [];
+            var infos = [];
 
             //carrega mapa e camadas de visualização
             function initMap() {
@@ -83,16 +84,20 @@ Some notes:
                         map: map,
                         icon: "img/markers/" + problemas[i].icon
                     });
-                    var infoContent = "<b>" + problemas[i].issue + "</b><br>" + problemas[i].street;
+                    markers.push(marker);
+                    var infoContent = "<b>" + problemas[i].issue + "</b><br>" + problemas[i].street +
+                        "<br><a onclick=\"marcaPrioritario(" + i + ")\"><i class=\"material-icons small\">"+
+                        "star_border</i></a>";
                     bindInfosToMarkers(marker, infoContent);
                 }
             }
 
             function bindInfosToMarkers(marker, content) {
+                var infowindow = new google.maps.InfoWindow({
+                    content: content 
+                });
+                infos.push(infowindow);
                 marker.addListener('click', function() {
-                    var infowindow = new google.maps.InfoWindow({
-                        content: content 
-                    });
                     infowindow.open(map, this);
                 });
             }
@@ -160,11 +165,21 @@ Some notes:
                     infoCamadas = false;
                 }
             }
-            
+
+            //marca os problemas considerados prioritários
+            function marcaPrioritario(id) {
+                var infoContent = "<b>" + problemas[id].issue + "</b><br>" + problemas[id].street +
+                    "<br><a onclick=\"marcaPrioritario(" + id + ")\">"+
+                    "<i class=\"material-icons small\">star</i></a>";
+                infos[id].setContent(infoContent);
+                markers[id].setOpacity(0.5);
+                writeLog("Prioridade selecionada: " + id);
+            }
+
             //Cordova stuff
             document.addEventListener("deviceready", onDeviceReady, false);
             var fileLog;
-            
+
             //carrega acesso ao disco
             function onDeviceReady() {
                 window.resolveLocalFileSystemURL("file:///storage/sdcard0/Download/", function(fs) {
@@ -174,7 +189,7 @@ Some notes:
                     });
                 });
             }
-            
+
             //escreve no log
             function writeLog(str) {
                 var log = ">> " + str + " [" + (new Date()) + "]\n";
@@ -215,8 +230,6 @@ Some notes:
                 { position: {lat:-23.524093, lng:-46.4499947}, issue: "calçada irregular",
                  street: "R. do Amerício, 25, Itaquera", icon: "transport.png"}
             ];
-
-            
 
 
         </script>
