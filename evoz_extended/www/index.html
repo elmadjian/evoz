@@ -82,7 +82,8 @@ Some notes:
                     var marker = new google.maps.Marker({
                         position: problemas[i].position,
                         map: map,
-                        icon: "img/markers/" + problemas[i].icon
+                        icon: "img/markers/" + problemas[i].icon + ".png",
+                        opacity: 0.6
                     });
                     markers.push(marker);
                     var infoContent = "<b>" + problemas[i].issue + "</b><br>" + problemas[i].street +
@@ -172,7 +173,8 @@ Some notes:
                     "<br><a onclick=\"marcaPrioritario(" + id + ")\">"+
                     "<i class=\"material-icons small\">star</i></a>";
                 infos[id].setContent(infoContent);
-                markers[id].setOpacity(0.5);
+                //markers[id].setIcon("img/markers/" + problemas[id].icon + "_h.png")
+                markers[id].setOpacity(1.0);
                 writeLog("Prioridade selecionada: " + id);
             }
 
@@ -204,31 +206,31 @@ Some notes:
             //===============
             var problemas = [
                 { position: {lat:-23.5249590, lng:-46.6967087}, issue: "semáforo quebrado", 
-                 street: "R. Clélia, 1112, Água Branca", icon: "transport.png"},
+                 street: "R. Clélia, 1112, Água Branca", icon: "transport"},
                 { position: {lat:-23.5634532, lng:-46.7124528}, issue: "buraco na via", 
-                 street: "Av. da Universidade, 220, Butantã", icon: "transport.png"},
+                 street: "Av. da Universidade, 220, Butantã", icon: "engineering"},
                 { position: {lat:-23.5864319, lng:-46.6829971}, issue: "buraco na via", 
-                 street: "R. Baltazar da Veiga, 490, Vila Nova Conceição", icon: "transport.png"},
+                 street: "R. Baltazar da Veiga, 490, Vila Nova Conceição", icon: "engineering"},
                 { position: {lat:-23.5914933, lng:-46.7154367}, issue: "buraco na via", 
-                 street: "R. Prof. Eduardo Monteiro, 100, Morumbi", icon: "transport.png"},
+                 street: "R. Prof. Eduardo Monteiro, 100, Morumbi", icon: "engineering"},
                 { position: {lat:-23.6031459, lng:-46.4989507}, issue: "semáforo quebrado", 
-                 street: "Av. Mateo Bei, 2567, São Mateus", icon: "transport.png"},
+                 street: "Av. Mateo Bei, 2567, São Mateus", icon: "transport"},
                 { position: {lat:-23.5961181, lng:-46.4467944}, issue: "limpeza urbana", 
-                 street: "R. Maria García Betim, 231, Jd. Iguatemi", icon: "festivals.png"},
+                 street: "R. Maria García Betim, 231, Jd. Iguatemi", icon: "festivals"},
                 { position: {lat:-23.4706016, lng:-46.6902859}, issue: "limpeza urbana", 
-                 street: "R. Rodolfo Bardella, 347, Brasilândia", icon: "festivals.png"},
+                 street: "R. Rodolfo Bardella, 347, Brasilândia", icon: "festivals"},
                 { position: {lat:-23.47733, lng:-46.7086854}, issue: "veículo abandonado", 
-                 street: "R. Muniz Freire, 120, Vila Zat", icon: "transport.png"},
+                 street: "R. Muniz Freire, 120, Vila Zat", icon: "automotive"},
                 { position: {lat:-23.5702027, lng:-46.6920923}, issue: "veículo abandonado", 
-                 street: "R. Juquiá, 96, Jd. América", icon: "transport.png"},
+                 street: "R. Juquiá, 96, Jd. América", icon: "automotive"},
                 { position: {lat:-23.589387, lng:-46.4121642}, issue: "equipamento danificado", 
-                 street: "R. Nascer do Sol, 529, Cidade Tiradentes", icon: "transport.png"}, 
+                 street: "R. Nascer do Sol, 529, Cidade Tiradentes", icon: "local-services"}, 
                 { position: {lat:-23.546018, lng:-46.6595474}, issue: "equipamento danificado", 
-                 street: "Av. Angélica, 1500, Higienópolis", icon: "local-services.png"},
+                 street: "Av. Angélica, 1500, Higienópolis", icon: "local-services"},
                 { position: {lat:-23.531579, lng:-46.6713707}, issue: "equipamento danificado", 
-                 street: "R. Min. Godói, 196, Água Branca", icon: "local-services.png"},
+                 street: "R. Min. Godói, 196, Água Branca", icon: "local-services"},
                 { position: {lat:-23.524093, lng:-46.4499947}, issue: "calçada irregular",
-                 street: "R. do Amerício, 25, Itaquera", icon: "transport.png"}
+                 street: "R. do Amerício, 25, Itaquera", icon: "engineering"}
             ];
 
 
