@@ -33,7 +33,6 @@ Some notes:
 
             //funções
             //===============
-
             $(document).ready(function () {
                 //trigger do menu lateral
                 $('.button-collapse').sideNav({
@@ -46,12 +45,14 @@ Some notes:
                 $('ul.tabs').tabs();
             });
 
-            //carrega o mapa no centro de SP
             var map;
             var recorrencias;
             var resolucoes;
             var rendas;
+            var infoCamadas = false;
+            var marker_infos = [];
 
+            //carrega mapa e camadas de visualização
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: -23.6126467, lng: -46.5811282},
@@ -75,11 +76,32 @@ Some notes:
                     url: "http://www.ime.usp.br/~elmad/prototipo/estat3.kml",
                     zIndex: -10
                 });
+
+                for (var i in problemas) {
+                    var marker = new google.maps.Marker({
+                        position: problemas[i].position,
+                        map: map,
+                        icon: "img/markers/" + problemas[i].icon
+                    });
+                    var infoContent = "<b>" + problemas[i].issue + "</b><br>" + problemas[i].street;
+                    bindInfosToMarkers(marker, infoContent);
+                }
             }
 
-            function escondeCamada(lista) {
+            function bindInfosToMarkers(marker, content) {
+                marker.addListener('click', function() {
+                    var infowindow = new google.maps.InfoWindow({
+                        content: content 
+                    });
+                    infowindow.open(map, this);
+                });
+            }
+
+            //funções auxiliares para mostrar e esconder elementos
+            function alteraCamada(camada, lista) {
                 for (var i in lista)
                     lista[i].setMap(null);
+                camada.setMap(map);
             }
 
             function alteraCard(card, lista) {
@@ -87,47 +109,119 @@ Some notes:
                     $(lista[i]).css('display', 'none');
                 $(card).fadeIn(1200);
             }
-            
+
             function alteraLegenda(legenda, lista) {
                 for (var i in lista)
                     $(lista[i]).css('display', 'none');
-                $(legenda).fadeIn(1200);
+                $(legenda).show(300);
+            }
+
+            function escondeTudo() {
+                var camadas = [recorrencias, resolucoes, rendas];
+                var cards = ['#recor_card', '#resol_card', '#renda_card'];
+                var legendas = ['#legenda1', '#legenda2', '#legenda3'];
+                for (var i = 0; i < camadas.length; i++) {
+                    camadas[i].setMap(null);
+                    $(cards[i]).css('display', 'none');
+                    $(legendas[i]).css('display', 'none');
+                }
             }
 
             //carrega estat1            
             function carregaRecorrencias() {
-                recorrencias.setMap(map);
-                escondeCamada([resolucoes, rendas]);
+                alteraCamada(recorrencias, [resolucoes, rendas]);
                 alteraCard('#recor_card', ['#resol_card', '#renda_card']);
                 alteraLegenda('#legenda1', ['#legenda2', '#legenda3']);
+                writeLog("cliquei em carregaRecorrencias()");
             }
 
             //carrega estat2
             function carregaResolucoes() {
-                resolucoes.setMap(map); 
-                escondeCamada([recorrencias, rendas]);
+                alteraCamada(resolucoes, [recorrencias, rendas]);
                 alteraCard('#resol_card', ['#recor_card', '#renda_card']);
                 alteraLegenda('#legenda2', ['#legenda1', '#legenda3']);
+                writeLog("cliquei em carregaResolucoes()");
             }
 
             //carregar estat3
             function carregaRendas() {
-                rendas.setMap(map);
-                escondeCamada([recorrencias, resolucoes]);
+                alteraCamada(rendas, [recorrencias, resolucoes]);
                 alteraCard('#renda_card', ['#resol_card', '#recor_card']);
                 alteraLegenda('#legenda3', ['#legenda2', '#legenda1']);
+                writeLog("cliquei em carregaRendas()");
             }
 
-            //carrega estat2
+            //gerenciador de display de camadas
+            function gerenciaCamadas() {
+                if (!infoCamadas)
+                    infoCamadas = true;
+                else {
+                    escondeTudo();
+                    infoCamadas = false;
+                }
+            }
+            
+            //Cordova stuff
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var fileLog;
+            
+            //carrega acesso ao disco
+            function onDeviceReady() {
+                window.resolveLocalFileSystemURL("file:///storage/sdcard0/Download/", function(fs) {
+                    fs.getFile("logzinho.txt", {create:true}, function(file) {
+                        fileLog = file;
+                    });
+                });
+            }
+            
+            //escreve no log
+            function writeLog(str) {
+                var log = ">> " + str + " [" + (new Date()) + "]\n";
+                fileLog.createWriter(function(fileWriter) {
+                    var blob = new Blob([log], {type:'text/plain'});
+                    fileWriter.seek(fileWriter.length);
+                    fileWriter.write(blob);
+                });
+            }
 
             //dados estáticos
             //===============
+            var problemas = [
+                { position: {lat:-23.5249590, lng:-46.6967087}, issue: "semáforo quebrado", 
+                 street: "R. Clélia, 1112, Água Branca", icon: "transport.png"},
+                { position: {lat:-23.5634532, lng:-46.7124528}, issue: "buraco na via", 
+                 street: "Av. da Universidade, 220, Butantã", icon: "transport.png"},
+                { position: {lat:-23.5864319, lng:-46.6829971}, issue: "buraco na via", 
+                 street: "R. Baltazar da Veiga, 490, Vila Nova Conceição", icon: "transport.png"},
+                { position: {lat:-23.5914933, lng:-46.7154367}, issue: "buraco na via", 
+                 street: "R. Prof. Eduardo Monteiro, 100, Morumbi", icon: "transport.png"},
+                { position: {lat:-23.6031459, lng:-46.4989507}, issue: "semáforo quebrado", 
+                 street: "Av. Mateo Bei, 2567, São Mateus", icon: "transport.png"},
+                { position: {lat:-23.5961181, lng:-46.4467944}, issue: "limpeza urbana", 
+                 street: "R. Maria García Betim, 231, Jd. Iguatemi", icon: "festivals.png"},
+                { position: {lat:-23.4706016, lng:-46.6902859}, issue: "limpeza urbana", 
+                 street: "R. Rodolfo Bardella, 347, Brasilândia", icon: "festivals.png"},
+                { position: {lat:-23.47733, lng:-46.7086854}, issue: "veículo abandonado", 
+                 street: "R. Muniz Freire, 120, Vila Zat", icon: "transport.png"},
+                { position: {lat:-23.5702027, lng:-46.6920923}, issue: "veículo abandonado", 
+                 street: "R. Juquiá, 96, Jd. América", icon: "transport.png"},
+                { position: {lat:-23.589387, lng:-46.4121642}, issue: "equipamento danificado", 
+                 street: "R. Nascer do Sol, 529, Cidade Tiradentes", icon: "transport.png"}, 
+                { position: {lat:-23.546018, lng:-46.6595474}, issue: "equipamento danificado", 
+                 street: "Av. Angélica, 1500, Higienópolis", icon: "local-services.png"},
+                { position: {lat:-23.531579, lng:-46.6713707}, issue: "equipamento danificado", 
+                 street: "R. Min. Godói, 196, Água Branca", icon: "local-services.png"},
+                { position: {lat:-23.524093, lng:-46.4499947}, issue: "calçada irregular",
+                 street: "R. do Amerício, 25, Itaquera", icon: "transport.png"}
+            ];
+
+            
 
 
         </script>
         <!-- Barra de navegação -->
         <nav>
-            <div class="brand-logo center">eVoz</div>
+            <div class="brand-logo center">e-Voz</div>
             <ul id="slide-out" class="side-nav">
                 <li><a href="views/conta.html">Fulano</a></li><div class="divider"></div>
                 <li><a href="index.html">Problemas</a></li>
@@ -149,7 +243,6 @@ Some notes:
                         <li class="tab col"><a href="#"><i class="material-icons medium">layers</i><br>Categorias</a></li>
                         <li class="tab col"><a href="#"><i class="material-icons medium">group</i><br>Líderes</a></li>
                         <li class="tab col"><a href="#"><i class="material-icons medium">poll</i><br>Estatísticas</a></li>
-                        <!--                        <li class="tab col"><a href="#"><i class="material-icons medium">help</i><br>Ajuda</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -161,15 +254,15 @@ Some notes:
         <div class="row">
             <div id="map" class="map-style"></div>
             <div class="container">
-                <div id="recor_card" class="card-panel white">Mapa de recorrência dos problemas</div>
-                <div id="resol_card" class="card-panel white">Mapa de resoluções dos problemas</div>
+                <div id="recor_card" class="card-panel white">Número de problemas nos últimos 6 meses</div>
+                <div id="resol_card" class="card-panel white">Resolução dos problemas pela Prefeitura</div>
                 <div id="renda_card" class="card-panel white">Mapa da distribuição de renda</div>
             </div>
         </div>
 
         <!-- Menu de estatísticas -->
         <div class="fixed-action-btn vertical click-to-toggle" style="bottom: 110px">
-            <a class="btn-floating btn-large">
+            <a class="btn-floating btn-large" onclick="gerenciaCamadas()">
                 <i class="material-icons">poll</i>
             </a>
             <ul>
@@ -189,7 +282,7 @@ Some notes:
 
         <!-- Legenda das estatísticas -->
         <div class="">
-            <img id="legenda1" class="materialboxed z-depth-1" src="img/barra_recorrencia.png" width="60%">
+            <img id="legenda1" class="materialboxed z-depth-1" src="img/recorrencia.png" width="60%">
             <img id="legenda2" class="materialboxed z-depth-1" src="img/problemas.png" width="35%">
             <img id="legenda3" class="materialboxed z-depth-1" src="img/renda.png" width="35%">
         </div>

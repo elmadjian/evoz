@@ -5,10 +5,16 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
     <allow-intent href="market:*" />
-    <name>HelloCordova</name>
+    <preference name="AndroidPersistentFileLocation" value="External" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <name>e-Voz</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Protótipo II
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team

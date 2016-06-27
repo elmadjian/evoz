@@ -132,6 +132,7 @@ Some notes:
                 alteraCamada(recorrencias, [resolucoes, rendas]);
                 alteraCard('#recor_card', ['#resol_card', '#renda_card']);
                 alteraLegenda('#legenda1', ['#legenda2', '#legenda3']);
+                writeLog("cliquei em carregaRecorrencias()");
             }
 
             //carrega estat2
@@ -139,6 +140,7 @@ Some notes:
                 alteraCamada(resolucoes, [recorrencias, rendas]);
                 alteraCard('#resol_card', ['#recor_card', '#renda_card']);
                 alteraLegenda('#legenda2', ['#legenda1', '#legenda3']);
+                writeLog("cliquei em carregaResolucoes()");
             }
 
             //carregar estat3
@@ -146,6 +148,7 @@ Some notes:
                 alteraCamada(rendas, [recorrencias, resolucoes]);
                 alteraCard('#renda_card', ['#resol_card', '#recor_card']);
                 alteraLegenda('#legenda3', ['#legenda2', '#legenda1']);
+                writeLog("cliquei em carregaRendas()");
             }
 
             //gerenciador de display de camadas
@@ -156,6 +159,30 @@ Some notes:
                     escondeTudo();
                     infoCamadas = false;
                 }
+            }
+            
+            //Cordova stuff
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var fileLog;
+            
+            //carrega acesso ao disco
+            function onDeviceReady() {
+                window.resolveLocalFileSystemURL("file:///storage/sdcard0/Download/", function(fs) {
+                    fs.getFile("logzinho.txt", {create:true}, function(file) {
+                        fileLog = file;
+                        writeLog("=======================\n==== NOVA ITERACAO ====\n");
+                    });
+                });
+            }
+            
+            //escreve no log
+            function writeLog(str) {
+                var log = ">> " + str + " [" + (new Date()) + "]\n";
+                fileLog.createWriter(function(fileWriter) {
+                    var blob = new Blob([log], {type:'text/plain'});
+                    fileWriter.seek(fileWriter.length);
+                    fileWriter.write(blob);
+                });
             }
 
             //dados estáticos
@@ -189,11 +216,13 @@ Some notes:
                  street: "R. do Amerício, 25, Itaquera", icon: "transport.png"}
             ];
 
+            
+
 
         </script>
         <!-- Barra de navegação -->
         <nav>
-            <div class="brand-logo center">eVoz</div>
+            <div class="brand-logo center">e-Voz</div>
             <ul id="slide-out" class="side-nav">
                 <li><a href="views/conta.html">Fulano</a></li><div class="divider"></div>
                 <li><a href="index.html">Problemas</a></li>
