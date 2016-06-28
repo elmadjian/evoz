@@ -12,7 +12,7 @@
     <allow-intent href="market:*" />
     <preference name="AndroidPersistentFileLocation" value="External" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <name>e-Voz</name>
+    <name>e-Voz II</name>
     <description>
         Protótipo II
     </description>

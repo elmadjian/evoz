@@ -42,6 +42,7 @@ Some notes:
 
                 //trigger das abas
                 $('ul.tabs').tabs();
+                $('.dropdown-button').dropdown();
             });
 
             //navegação das abas
@@ -49,7 +50,7 @@ Some notes:
                 var elements = ['#problemas', '#lista', '#lideres', '#conta'];
                 for (var i in elements)
                     $(elements[i]).css('display', 'none');
-                $(element).css('display', 'block');
+                $(element).fadeIn(500);
             }
 
             var map;
@@ -106,6 +107,8 @@ Some notes:
                 });
                 infos.push(infowindow);
                 marker.addListener('click', function() {
+                    for (var i in infos)
+                        infos[i].close();
                     infowindow.open(map, this);
                 });
             }
@@ -335,7 +338,7 @@ Some notes:
 
             <!-- Adicionar um problema -->
             <div class="fixed-action-btn">
-                <a class="btn-floating btn-large waves-effect waves-light modal-trigger" style="bottom: 10px" href="#modal1">
+                <a class="btn-floating btn-large waves-effect waves-light" style="bottom: 10px" onclick="$('#submit').openModal()">
                     <i class="large material-icons">add</i>
                 </a>
             </div>
@@ -569,14 +572,60 @@ Some notes:
 
         <!-- PÁGINA SUBMISSAO -->
         <!--==================-->
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-        <div id="modal1" class="modal">
+        <div id="submit" class="modal">
             <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
+                <h4 class="center" style="margin-bottom:30px;">Tem um problema?</h4>
+                <!-- Formulário  -->
+                <div class="row" style="width:70%;">
+                    <div class="col s4">
+                        <a class="btn-floating btn-large waves-effect waves-light"><i class="large material-icons">mic</i></a>
+                    </div>
+                    <div class="col s3">
+                        <a class="btn-floating waves-effect waves-light"><i class="material-icons">camera_alt</i></a>
+                    </div>
+                    <div class="col s3">
+                        <a class="btn-floating waves-effect waves-light"><i class="material-icons">videocam</i></a>
+                    </div>
+                </div>
+                <div class="row"></div>
+                <div class="textfield">
+                    <div class="input-field col s12">
+                        <textarea id="relato" class="materialize-textarea"></textarea>
+                        <label for="relato" style="font-size:100%;">Relato</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <i class="material-icons">room</i>
+                        <label for="location" style="font-size:100%;">Localização: </label>
+                    </div>
+                    <div class="col s6">
+                        <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Aqui</a>
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#!">Aqui</a></li>
+                            <li><a href="#!">Outra...</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <i class="material-icons">schedule</i>
+                        <label for="time_event" style="font-size:100%;">Horário: </label>
+                    </div>
+                    <div class="col s6">
+                        <a class='dropdown-button btn' href='#' data-activates='dropdown2'>Agora</a>
+                        <ul id='dropdown2' class='dropdown-content'>
+                            <li><a href="#!">Agora</a></li>
+                            <li><a href="#!">30 min.</a></li>
+                            <li><a href="#!">1 hora</a></li>
+                            <li><a href="#!">Escolher...</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
             <div class="modal-footer">
-                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                <a href="#!" class=" modal-action modal-close waves-effect waves-light btn-flat blue lighten-4">Enviar</a>
             </div>
         </div>
 

@@ -107,6 +107,8 @@ Some notes:
                 });
                 infos.push(infowindow);
                 marker.addListener('click', function() {
+                    for (var i in infos)
+                        infos[i].close();
                     infowindow.open(map, this);
                 });
             }
