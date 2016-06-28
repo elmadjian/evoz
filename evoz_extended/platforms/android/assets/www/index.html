@@ -30,7 +30,6 @@ Some notes:
 
     <body>
         <script>
-
             //funções
             //===============
             $(document).ready(function () {
@@ -44,6 +43,14 @@ Some notes:
                 //trigger das abas
                 $('ul.tabs').tabs();
             });
+
+            //navegação das abas
+            function navega(element) {
+                var elements = ['#problemas', '#lista', '#lideres', '#conta'];
+                for (var i in elements)
+                    $(elements[i]).css('display', 'none');
+                $(element).css('display', 'block');
+            }
 
             var map;
             var recorrencias;
@@ -82,7 +89,8 @@ Some notes:
                     var marker = new google.maps.Marker({
                         position: problemas[i].position,
                         map: map,
-                        icon: "img/markers/" + problemas[i].icon
+                        icon: "img/markers/" + problemas[i].icon + ".png",
+                        opacity: 0.6
                     });
                     markers.push(marker);
                     var infoContent = "<b>" + problemas[i].issue + "</b><br>" + problemas[i].street +
@@ -168,12 +176,17 @@ Some notes:
 
             //marca os problemas considerados prioritários
             function marcaPrioritario(id) {
-                var infoContent = "<b>" + problemas[id].issue + "</b><br>" + problemas[id].street +
-                    "<br><a onclick=\"marcaPrioritario(" + id + ")\">"+
-                    "<i class=\"material-icons small\">star</i></a>";
-                infos[id].setContent(infoContent);
-                markers[id].setOpacity(0.5);
-                writeLog("Prioridade selecionada: " + id);
+                var value = parseInt($('#contagem').html());
+                if (value > 0) {
+                    value--;
+                    var infoContent = "<b>" + problemas[id].issue + "</b><br>" + problemas[id].street +
+                        "<br><a onclick=\"marcaPrioritario(" + id + ")\">"+
+                        "<i class=\"material-icons small\">star</i></a>";
+                    infos[id].setContent(infoContent);
+                    markers[id].setOpacity(1.0);
+                    $('#contagem').html(value);
+                    writeLog("Prioridade selecionada: " + id);
+                }
             }
 
             //Cordova stuff
@@ -204,103 +217,368 @@ Some notes:
             //===============
             var problemas = [
                 { position: {lat:-23.5249590, lng:-46.6967087}, issue: "semáforo quebrado", 
-                 street: "R. Clélia, 1112, Água Branca", icon: "transport.png"},
+                 street: "R. Clélia, 1112, Água Branca", icon: "transport"},
+
                 { position: {lat:-23.5634532, lng:-46.7124528}, issue: "buraco na via", 
-                 street: "Av. da Universidade, 220, Butantã", icon: "transport.png"},
-                { position: {lat:-23.5864319, lng:-46.6829971}, issue: "buraco na via", 
-                 street: "R. Baltazar da Veiga, 490, Vila Nova Conceição", icon: "transport.png"},
+                 street: "Av. da Universidade, 220, Butantã", icon: "engineering"},
+
+                { position: {lat:-23.5864319, lng:-46.6829971}, issue: "limpeza urbana", 
+                 street: "R. Baltazar da Veiga, 490, Vila Nova Conceição", icon: "festivals"},
+
                 { position: {lat:-23.5914933, lng:-46.7154367}, issue: "buraco na via", 
-                 street: "R. Prof. Eduardo Monteiro, 100, Morumbi", icon: "transport.png"},
+                 street: "R. Prof. Eduardo Monteiro, 100, Morumbi", icon: "engineering"},
+
                 { position: {lat:-23.6031459, lng:-46.4989507}, issue: "semáforo quebrado", 
-                 street: "Av. Mateo Bei, 2567, São Mateus", icon: "transport.png"},
+                 street: "Av. Mateo Bei, 2567, São Mateus", icon: "transport"},
+
                 { position: {lat:-23.5961181, lng:-46.4467944}, issue: "limpeza urbana", 
-                 street: "R. Maria García Betim, 231, Jd. Iguatemi", icon: "festivals.png"},
+                 street: "R. Maria García Betim, 231, Jd. Iguatemi", icon: "festivals"},
+
                 { position: {lat:-23.4706016, lng:-46.6902859}, issue: "limpeza urbana", 
-                 street: "R. Rodolfo Bardella, 347, Brasilândia", icon: "festivals.png"},
+                 street: "R. Rodolfo Bardella, 347, Brasilândia", icon: "festivals"},
+
                 { position: {lat:-23.47733, lng:-46.7086854}, issue: "veículo abandonado", 
-                 street: "R. Muniz Freire, 120, Vila Zat", icon: "transport.png"},
+                 street: "R. Muniz Freire, 120, Vila Zat", icon: "automotive"},
+
                 { position: {lat:-23.5702027, lng:-46.6920923}, issue: "veículo abandonado", 
-                 street: "R. Juquiá, 96, Jd. América", icon: "transport.png"},
+                 street: "R. Juquiá, 96, Jd. América", icon: "automotive"},
+
                 { position: {lat:-23.589387, lng:-46.4121642}, issue: "equipamento danificado", 
-                 street: "R. Nascer do Sol, 529, Cidade Tiradentes", icon: "transport.png"}, 
+                 street: "R. Nascer do Sol, 529, Cidade Tiradentes", icon: "local-services"}, 
+
                 { position: {lat:-23.546018, lng:-46.6595474}, issue: "equipamento danificado", 
-                 street: "Av. Angélica, 1500, Higienópolis", icon: "local-services.png"},
+                 street: "Av. Angélica, 1500, Higienópolis", icon: "local-services"},
+
                 { position: {lat:-23.531579, lng:-46.6713707}, issue: "equipamento danificado", 
-                 street: "R. Min. Godói, 196, Água Branca", icon: "local-services.png"},
-                { position: {lat:-23.524093, lng:-46.4499947}, issue: "calçada irregular",
-                 street: "R. do Amerício, 25, Itaquera", icon: "transport.png"}
+                 street: "R. Min. Godói, 196, Água Branca", icon: "local-services"},
+
+                { position: {lat:-23.524093, lng:-46.4499947}, issue: "veículo abandonado",
+                 street: "R. do Amerício, 25, Itaquera", icon: "automotive"},
+
+                { position: {lat:-23.827714, lng:-46.7280136}, issue: "semáforo quebrado",
+                 street: "R. José Pedro de Borba, 30 - Jardim Novo Parelheiros", icon: "transport"},
+
+                { position: {lat:-23.770501, lng:-46.6680130}, issue: "buraco na via",
+                 street: "R. Rodrigues, 313 - Jardim Malia II", icon: "engineering"}
             ];
 
 
         </script>
-        <!-- Barra de navegação -->
-        <nav>
-            <div class="brand-logo center">e-Voz</div>
-            <ul id="slide-out" class="side-nav">
-                <li><a href="views/conta.html">Fulano</a></li><div class="divider"></div>
-                <li><a href="index.html">Problemas</a></li>
-                <li><a href="views/categorias.html">Categorias</a></li>
-                <li><a href="views/lideres.html">Líderes</a></li>
-                <li><a href="views/estatisticas.html">Estatísticas</a></li>
-                <li><a href="views/ajuda.html">Ajuda</a></li>
+        <div id="fixa">
+
+            <!-- Barra de navegação -->
+            <nav>
+                <div class="brand-logo center">e-Voz</div>
+                <ul id="slide-out" class="side-nav">
+                    <li><a href="views/conta.html">Fulano</a></li><div class="divider"></div>
+                    <li><a href="index.html">Problemas</a></li>
+                    <li><a href="views/categorias.html">Categorias</a></li>
+                    <li><a href="views/lideres.html">Líderes</a></li>
+                    <li><a href="views/estatisticas.html">Estatísticas</a></li>
+                    <li><a href="views/ajuda.html">Ajuda</a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                <span id="contagem" class="right" style="margin-right:4px;">5</span>
+                <i class="material-icons right">star</i>
+            </nav>
+
+
+            <!-- Título / abas -->
+            <div class="bg z-depth-1"></div>
+            <div class="container blue lighten-3">
+                <div class="row titulo">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col"><a href="#" onclick="navega('#problemas')">
+                                <i class="material-icons medium">room</i><br>Problemas</a>
+                            </li>
+                            <li class="tab col"><a href="#" onclick="navega('#lista')">
+                                <i class="material-icons medium">view_list</i><br>Lista</a>
+                            </li>
+                            <li class="tab col"><a href="#" onclick="navega('#lideres')">
+                                <i class="material-icons medium">group</i><br>Líderes</a>
+                            </li>
+                            <li class="tab col"><a href="#" onclick="navega('#conta')">
+                                <i class="material-icons medium">account_circle</i><br>Conta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PÁGINA PROBLEMAS -->
+        <!--==================-->
+        <div id="problemas" class="conteudo">
+            <!-- Mapa de SP  -->
+            <div class="row">
+                <div id="map" class="map-style"></div>
+                <div class="container">
+                    <div id="recor_card" class="card-panel white">Número de problemas nos últimos 6 meses</div>
+                    <div id="resol_card" class="card-panel white">Resolução dos problemas pela Prefeitura</div>
+                    <div id="renda_card" class="card-panel white">Mapa da distribuição de renda</div>
+                </div>
+            </div>
+
+            <!-- Menu de estatísticas -->
+            <div class="fixed-action-btn vertical click-to-toggle" style="bottom: 110px">
+                <a class="btn-floating btn-large" onclick="gerenciaCamadas()">
+                    <i class="material-icons">poll</i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating blue darken-3" onclick="carregaRecorrencias()"><i class="material-icons">history</i></a></li>
+                    <li><a class="btn-floating blue darken-3" onclick="carregaResolucoes()"><i class="material-icons">account_balance</i></a></li>
+                    <li><a class="btn-floating blue darken-3" onclick="carregaRendas()"><i class="material-icons">monetization_on</i></a></li>
+                </ul>
+            </div>
+
+
+            <!-- Adicionar um problema -->
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large waves-effect waves-light modal-trigger" style="bottom: 10px" href="#modal1">
+                    <i class="large material-icons">add</i>
+                </a>
+            </div>
+
+            <!-- Legenda das estatísticas -->
+            <div>
+                <img id="legenda1" class="materialboxed z-depth-1" src="img/recorrencia.png" width="60%">
+                <img id="legenda2" class="materialboxed z-depth-1" src="img/problemas.png" width="35%">
+                <img id="legenda3" class="materialboxed z-depth-1" src="img/renda.png" width="35%">
+            </div>
+        </div>
+
+        <!-- PÁGINA LISTA -->
+        <!--==============-->
+        <div id="lista" style="display:none;" class="container conteudo">
+
+            <!-- item 1-->
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/abandonado1.jpg">
+                        <span class="card-title blue lighten-1">Veículo abandonado</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" onclick="navega('#problemas')"><i class="material-icons">room</i> R. Muniz Freire, 120, Vila Zat</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/semaforo3.jpg">
+                        <span class="card-title blue lighten-1">Semáforo quebrado</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" onclick="navega('#problemas')"><i class="material-icons">room</i> Av. Mateo Bei, 2567, São Mateus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/buraco.jpg">
+                        <span class="card-title blue lighten-1">Buraco na via</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" onclick="navega('#problemas')"><i class="material-icons">room</i> Av. da Universidade, 220, Butantã</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- item 4-->
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/garbage1.jpg">
+                        <span class="card-title blue lighten-1">Limpeza urbana</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" onclick="navega('#problemas')"><i class="material-icons">room</i> R. Rodolfo Bardella, 347, Brasilândia</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- item 5-->
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/equipamentos1.jpg">
+                        <span class="card-title blue lighten-1">Equipamento danificado</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" onclick="navega('#problemas')"><i class="material-icons">room</i> R. Min. Godói, 196, Água Branca</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PÁGINA LISTA -->
+        <!--==============-->
+        <div id="lideres" style="display:none;" class="conteudo">
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img src="img/pics/person2.jpg" alt="" class="circle">
+                    <h5>Aspásia de Mileto</h5>
+                    <p>345 postagens <br>
+                        837 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person4.jpg" alt="" class="circle">
+                    <h5>Álvaro de Campos</h5>
+                    <p>340 postagens <br>
+                        737 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person6.jpg" alt="" class="circle">
+                    <h5>Licurgo de Atenas</h5>
+                    <p>325 postagens <br>
+                        717 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person7.jpg" alt="" class="circle">
+                    <h5>Hipácia de Alexandria</h5>
+                    <p>301 postagens <br>
+                        635 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person8.jpg" alt="" class="circle">
+                    <h5>Ricardo Reis</h5>
+                    <p>290 postagens <br>
+                        641 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person12.jpg" alt="" class="circle">
+                    <h5>Alberto Caeiro</h5>
+                    <p>280 postagens <br>
+                        610 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person9.jpg" alt="" class="circle">
+                    <h5>Catalina de Siena</h5>
+                    <p>301 postagens <br>
+                        497 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person14.jpg" alt="" class="circle">
+                    <h5>Edith Stein</h5>
+                    <p>215 postagens <br>
+                        466 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="img/pics/person15.jpg" alt="" class="circle">
+                    <h5>Sólon de Atenas</h5>
+                    <p>216 postagens <br>
+                        453 apoios
+                    </p>
+                    <a href="#!" class="secondary-content">
+                        <i class="material-icons">chat</i>
+                        <i class="material-icons">email</i>
+                    </a>
+                </li>
+
             </ul>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        </nav>
+        </div>
 
-
-        <!-- Título -->
-        <div class="container blue lighten-3">
-            <div class="row titulo">
-                <div class="col s12">
-                    <ul class="tabs">
-                        <li class="tab col"><a href="#"><i class="material-icons medium">room</i><br>Problemas</a></li>
-                        <li class="tab col"><a href="#"><i class="material-icons medium">layers</i><br>Categorias</a></li>
-                        <li class="tab col"><a href="#"><i class="material-icons medium">group</i><br>Líderes</a></li>
-                        <li class="tab col"><a href="#"><i class="material-icons medium">poll</i><br>Estatísticas</a></li>
-                    </ul>
+        <!-- PÁGINA LISTA -->
+        <!--==============-->
+        <div id="conta" style="display:none;" class="conteudo container">
+            <div class="row">
+                <div class="col s12 m7">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/pics/person5.jpg" class="circle">
+                            <span class="card-title">Fulano de Tal e Tal</span>
+                        </div>
+                        <div class="card-content">
+                            <h5><strong>Descrição</strong></h5>
+                            <p>Sou uma pessoa bastante popular entre desconhecidos.</p><br>
+                            <h5><strong>Pontuação</strong></h5>
+                            <p>&bull; 23 postagens</p>
+                            <p>&bull; 15 apoios</p><br>
+                            <h5><strong>Contato</strong></h5>
+                            <p>&bull; E-mail: fulanodetal@rotimeio.com</p>
+                            <p>&bull; Skype: fulanodetalaleluia</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-
-        <!-- Mapa de SP  -->
-        <div class="row">
-            <div id="map" class="map-style"></div>
-            <div class="container">
-                <div id="recor_card" class="card-panel white">Número de problemas nos últimos 6 meses</div>
-                <div id="resol_card" class="card-panel white">Resolução dos problemas pela Prefeitura</div>
-                <div id="renda_card" class="card-panel white">Mapa da distribuição de renda</div>
+        <!-- PÁGINA SUBMISSAO -->
+        <!--==================-->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
             </div>
         </div>
-
-        <!-- Menu de estatísticas -->
-        <div class="fixed-action-btn vertical click-to-toggle" style="bottom: 110px">
-            <a class="btn-floating btn-large" onclick="gerenciaCamadas()">
-                <i class="material-icons">poll</i>
-            </a>
-            <ul>
-                <li><a class="btn-floating blue darken-3" onclick="carregaRecorrencias()"><i class="material-icons">history</i></a></li>
-                <li><a class="btn-floating blue darken-3" onclick="carregaResolucoes()"><i class="material-icons">account_balance</i></a></li>
-                <li><a class="btn-floating blue darken-3" onclick="carregaRendas()"><i class="material-icons">monetization_on</i></a></li>
-            </ul>
-        </div>
-
-
-        <!-- Adicionar um problema -->
-        <div class="fixed-action-btn">
-            <a class="btn-floating btn-large waves-effect waves-light" style="bottom: 10px">
-                <i class="large material-icons">add</i>
-            </a>
-        </div>
-
-        <!-- Legenda das estatísticas -->
-        <div class="">
-            <img id="legenda1" class="materialboxed z-depth-1" src="img/recorrencia.png" width="60%">
-            <img id="legenda2" class="materialboxed z-depth-1" src="img/problemas.png" width="35%">
-            <img id="legenda3" class="materialboxed z-depth-1" src="img/renda.png" width="35%">
-        </div>
-
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
