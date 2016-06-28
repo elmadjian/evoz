@@ -3,7 +3,7 @@
 	<Document>
 		<name>distritos</name>
 		<Placemark>
-			<name>Água Rasa (Distrito de São Paulo)</name>
+			<name>Água Rasa </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -15,7 +15,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Alto de Pinheiros (Distrito de São Paulo)</name>
+			<name>Alto de Pinheiros </name>
 			<styleUrl>#poly-DB4436-1-168-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -27,7 +27,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Anhangüera (Distrito de São Paulo)</name>
+			<name>Anhangüera </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -39,7 +39,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Aricanduva (Distrito de São Paulo)</name>
+			<name>Aricanduva </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -51,7 +51,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Artur Alvim (Distrito de São Paulo)</name>
+			<name>Artur Alvim </name>
 			<styleUrl>#poly-DB4436-1-112-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -63,7 +63,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Barra Funda (Distrito de São Paulo)</name>
+			<name>Barra Funda </name>
 			<styleUrl>#poly-DB4436-1-115-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -75,7 +75,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Bela Vista (Distrito de São Paulo)</name>
+			<name>Bela Vista </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -87,7 +87,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Belém (Distrito de São Paulo)</name>
+			<name>Belém </name>
 			<styleUrl>#poly-DB4436-1-112-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -99,7 +99,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Bom Retiro (Distrito de São Paulo)</name>
+			<name>Bom Retiro </name>
 			<styleUrl>#poly-DB4436-1-166-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -111,7 +111,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Brás (Distrito de São Paulo)</name>
+			<name>Brás </name>
 			<styleUrl>#poly-DB4436-1-194-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -123,7 +123,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Brasilândia (Distrito de São Paulo)</name>
+			<name>Brasilândia </name>
 			<styleUrl>#poly-DB4436-1-140-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -135,7 +135,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Butantã (Distrito de São Paulo)</name>
+			<name>Butantã </name>
 			<styleUrl>#poly-DB4436-1-255-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -147,7 +147,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cachoeirinha (Distrito de São Paulo)</name>
+			<name>Cachoeirinha </name>
 			<styleUrl>#poly-DB4436-1-46-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -159,7 +159,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cambuci (Distrito de São Paulo)</name>
+			<name>Cambuci </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -171,7 +171,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Campo Belo (Distrito de São Paulo)</name>
+			<name>Campo Belo </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -183,7 +183,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Campo Grande (Distrito de São Paulo)</name>
+			<name>Campo Grande </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -195,7 +195,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Campo Limpo (Distrito de São Paulo)</name>
+			<name>Campo Limpo </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -207,7 +207,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cangaíba (Distrito de São Paulo)</name>
+			<name>Cangaíba </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -219,7 +219,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Capão Redondo (Distrito de São Paulo)</name>
+			<name>Capão Redondo </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -231,7 +231,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Carrão (Distrito de São Paulo)</name>
+			<name>Carrão </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -243,7 +243,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Casa Verde (Distrito de São Paulo)</name>
+			<name>Casa Verde </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -255,7 +255,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cidade Ademar (Distrito de São Paulo)</name>
+			<name>Cidade Ademar </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -267,7 +267,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cidade Dutra (Distrito de São Paulo)</name>
+			<name>Cidade Dutra </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -279,7 +279,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cidade Líder (Distrito de São Paulo)</name>
+			<name>Cidade Líder </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -291,7 +291,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cidade Tiradentes (Distrito de São Paulo)</name>
+			<name>Cidade Tiradentes </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -303,7 +303,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Consolação (Distrito de São Paulo)</name>
+			<name>Consolação </name>
 			<styleUrl>#poly-DB4436-1-214-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -315,7 +315,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Cursino (Distrito de São Paulo)</name>
+			<name>Cursino </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -327,7 +327,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Ermelino Matarazzo (Distrito de São Paulo)</name>
+			<name>Ermelino Matarazzo </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -339,7 +339,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Freguesia do Ó (Distrito de São Paulo)</name>
+			<name>Freguesia do Ó </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -351,7 +351,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Grajaú (Distrito de São Paulo)</name>
+			<name>Grajaú </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -363,7 +363,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Guaianases (Distrito de São Paulo)</name>
+			<name>Guaianases </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -375,7 +375,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Iguatemi (Distrito de São Paulo)</name>
+			<name>Iguatemi </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -387,7 +387,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Ipiranga (Distrito de São Paulo)</name>
+			<name>Ipiranga </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -399,7 +399,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Itaim Bibi (Distrito de São Paulo)</name>
+			<name>Itaim Bibi </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -411,7 +411,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Itaim Paulista (Distrito de São Paulo)</name>
+			<name>Itaim Paulista </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -423,7 +423,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Itaquera (Distrito de São Paulo)</name>
+			<name>Itaquera </name>
 			<styleUrl>#poly-DB4436-1-255-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -435,7 +435,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jabaquara (Distrito de São Paulo)</name>
+			<name>Jabaquara </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -447,7 +447,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jaçanã (Distrito de São Paulo)</name>
+			<name>Jaçanã </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -459,7 +459,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jaguara (Distrito de São Paulo)</name>
+			<name>Jaguara </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -471,7 +471,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jaguaré (Distrito de São Paulo)</name>
+			<name>Jaguaré </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -483,7 +483,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jaraguá (Distrito de São Paulo)</name>
+			<name>Jaraguá </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -495,7 +495,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jardim Ângela (Distrito de São Paulo)</name>
+			<name>Jardim Ângela </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -507,7 +507,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jardim Helena (Distrito de São Paulo)</name>
+			<name>Jardim Helena </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -519,7 +519,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jardim Paulista (Distrito de São Paulo)</name>
+			<name>Jardim Paulista </name>
 			<styleUrl>#poly-DB4436-1-82-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -531,7 +531,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Jardim São Luís (Distrito de São Paulo)</name>
+			<name>Jardim São Luís </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -543,7 +543,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>José Bonifácio (Distrito de São Paulo)</name>
+			<name>José Bonifácio </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -555,7 +555,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Lajeado (Distrito de São Paulo)</name>
+			<name>Lajeado </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -567,7 +567,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Lapa (Distrito de São Paulo)</name>
+			<name>Lapa </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -579,7 +579,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Liberdade (Distrito de São Paulo)</name>
+			<name>Liberdade </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -591,7 +591,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Limão (Distrito de São Paulo)</name>
+			<name>Limão </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -603,7 +603,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Mandaqui (Distrito de São Paulo)</name>
+			<name>Mandaqui </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -615,7 +615,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Marsilac (Distrito de São Paulo)</name>
+			<name>Marsilac </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -627,7 +627,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Moema (Distrito de São Paulo)</name>
+			<name>Moema </name>
 			<styleUrl>#poly-DB4436-1-135-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -639,7 +639,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Mooca (Distrito de São Paulo)</name>
+			<name>Mooca </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -651,7 +651,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Morumbi (Distrito de São Paulo)</name>
+			<name>Morumbi </name>
 			<styleUrl>#poly-DB4436-1-117-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -663,7 +663,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Parelheiros (Distrito de São Paulo)</name>
+			<name>Parelheiros </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -675,7 +675,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Pari (Distrito de São Paulo)</name>
+			<name>Pari </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -687,7 +687,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Parque do Carmo (Distrito de São Paulo)</name>
+			<name>Parque do Carmo </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -699,7 +699,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Pedreira (Distrito de São Paulo)</name>
+			<name>Pedreira </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -711,7 +711,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Penha (Distrito de São Paulo)</name>
+			<name>Penha </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -723,7 +723,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Perdizes (Distrito de São Paulo)</name>
+			<name>Perdizes </name>
 			<styleUrl>#poly-DB4436-1-94-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -735,7 +735,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Perus (Distrito de São Paulo)</name>
+			<name>Perus </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -747,7 +747,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Pinheiros (Distrito de São Paulo)</name>
+			<name>Pinheiros </name>
 			<styleUrl>#poly-DB4436-1-209-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -759,7 +759,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Pirituba (Distrito de São Paulo)</name>
+			<name>Pirituba </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -771,7 +771,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Ponte Rasa (Distrito de São Paulo)</name>
+			<name>Ponte Rasa </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -783,7 +783,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Raposo Tavares (Distrito de São Paulo)</name>
+			<name>Raposo Tavares </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -795,7 +795,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>República (Distrito de São Paulo)</name>
+			<name>República </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -807,7 +807,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Rio Pequeno (Distrito de São Paulo)</name>
+			<name>Rio Pequeno </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -819,7 +819,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Sacomã (Distrito de São Paulo)</name>
+			<name>Sacomã </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -831,7 +831,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Santa Cecília (Distrito de São Paulo)</name>
+			<name>Santa Cecília </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -843,7 +843,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Santana (Distrito de São Paulo)</name>
+			<name>Santana </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -855,7 +855,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Santo Amaro (Distrito de São Paulo)</name>
+			<name>Santo Amaro </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -867,7 +867,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>São Domingos (Distrito de São Paulo)</name>
+			<name>São Domingos </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -879,7 +879,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>São Lucas (Distrito de São Paulo)</name>
+			<name>São Lucas </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -891,7 +891,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>São Mateus (Distrito de São Paulo)</name>
+			<name>São Mateus </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -903,7 +903,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>São Miguel Paulista (Distrito de São Paulo)</name>
+			<name>São Miguel Paulista </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -915,7 +915,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>São Rafael (distrito de São Paulo)</name>
+			<name>São Rafael </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -927,7 +927,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Sapopemba (Distrito de São Paulo)</name>
+			<name>Sapopemba </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -939,7 +939,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Saúde (Distrito de São Paulo)</name>
+			<name>Saúde </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -951,7 +951,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Sé (Distrito de São Paulo)</name>
+			<name>Sé </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -963,7 +963,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Socorro (Distrito de São Paulo)</name>
+			<name>Socorro </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -975,7 +975,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Tatuapé (Distrito de São Paulo)</name>
+			<name>Tatuapé </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -987,7 +987,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Tremembé (Distrito de São Paulo)</name>
+			<name>Tremembé </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -999,7 +999,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Tucuruvi (Distrito de São Paulo)</name>
+			<name>Tucuruvi </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1011,7 +1011,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Andrade (Distrito de São Paulo)</name>
+			<name>Vila Andrade </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1023,7 +1023,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Curuçá (Distrito de São Paulo)</name>
+			<name>Vila Curuçá </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1035,7 +1035,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Formosa (Distrito de São Paulo)</name>
+			<name>Vila Formosa </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1047,7 +1047,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Guilherme (Distrito de São Paulo)</name>
+			<name>Vila Guilherme </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1059,7 +1059,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Jacuí (Distrito de São Paulo)</name>
+			<name>Vila Jacuí </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1071,7 +1071,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Leopoldina (Distrito de São Paulo)</name>
+			<name>Vila Leopoldina </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1083,7 +1083,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Maria (Distrito de São Paulo)</name>
+			<name>Vila Maria </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1095,7 +1095,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Mariana (Distrito de São Paulo)</name>
+			<name>Vila Mariana </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1107,7 +1107,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Matilde (Distrito de São Paulo)</name>
+			<name>Vila Matilde </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1119,7 +1119,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Medeiros (Distrito de São Paulo)</name>
+			<name>Vila Medeiros </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1131,7 +1131,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Prudente (Distrito de São Paulo)</name>
+			<name>Vila Prudente </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
@@ -1143,7 +1143,7 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<name>Vila Sônia (Distrito de São Paulo)</name>
+			<name>Vila Sônia </name>
 			<styleUrl>#poly-DB4436-1-31-nodesc</styleUrl>
 			<Polygon>
 				<outerBoundaryIs>
