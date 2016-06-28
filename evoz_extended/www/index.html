@@ -60,6 +60,7 @@ Some notes:
             var infoCamadas = false;
             var markers = [];
             var infos = [];
+            var marcados = [];
 
             //carrega mapa e camadas de visualização
             function initMap() {
@@ -98,6 +99,7 @@ Some notes:
                         "<br><a onclick=\"marcaPrioritario(" + i + ")\"><i class=\"material-icons small\">"+
                         "star_border</i></a>";
                     bindInfosToMarkers(marker, infoContent);
+                    marcados[i] = false;
                 }
             }
 
@@ -180,14 +182,24 @@ Some notes:
             //marca os problemas considerados prioritários
             function marcaPrioritario(id) {
                 var value = parseInt($('#contagem').html());
-                if (value > 0) {
-                    value--;
+                if (marcados[id]) {
+                    marcados[id] = false;
+                    var infoContent = "<b>" + problemas[id].issue + "</b><br>" + problemas[id].street +
+                        "<br><a onclick=\"marcaPrioritario(" + id + ")\">"+
+                        "<i class=\"material-icons small\">star_border</i></a>";
+                    infos[id].setContent(infoContent);
+                    markers[id].setOpacity(0.6);
+                    $('#contagem').html(++value);
+                    writeLog("Prioridade de-selecionada: " + id);
+                }
+                else if (value > 0) {
+                    marcados[id] = true;
                     var infoContent = "<b>" + problemas[id].issue + "</b><br>" + problemas[id].street +
                         "<br><a onclick=\"marcaPrioritario(" + id + ")\">"+
                         "<i class=\"material-icons small\">star</i></a>";
                     infos[id].setContent(infoContent);
                     markers[id].setOpacity(1.0);
-                    $('#contagem').html(value);
+                    $('#contagem').html(--value);
                     writeLog("Prioridade selecionada: " + id);
                 }
             }
@@ -281,7 +293,7 @@ Some notes:
                     <li><a href="views/ajuda.html">Ajuda</a></li>
                 </ul>
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                <span id="contagem" class="right" style="margin-right:4px;">5</span>
+                <span id="contagem" class="right" style="margin-right:5px;">5</span>
                 <i class="material-icons right">star</i>
             </nav>
 
