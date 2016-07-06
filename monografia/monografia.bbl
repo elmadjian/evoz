@@ -32,6 +32,22 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem{dell:2012}
+{Nicola Dell}, {Vidya Vaidyanathan}, {Indrani Medhi}, {Edward Cutrell}, {and}
+  {William Thies}. 2012.
+\newblock \showarticletitle{Yours is better!: participant response bias in
+  HCI}. In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}. ACM, 1321--1330.
+\newblock
+
+
+\bibitem{likert:1932}
+{Rensis Likert}. 1932.
+\newblock \showarticletitle{A technique for the measurement of attitudes.}
+\newblock {\em Archives of psychology\/} (1932).
+\newblock
+
+
 \bibitem{tversky:1973}
 {Amos Tversky} {and} {Daniel Kahneman}. 1973.
 \newblock \showarticletitle{Availability: A heuristic for judging frequency and

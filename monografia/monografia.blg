@@ -6,44 +6,49 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Database file #1: sample.bib
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-You've used 1 entry,
+Warning--empty publisher in dell:2012
+Warning--empty address in dell:2012
+Warning--no number and no volume in likert:1932
+Warning--page numbers missing in both pages and numpages fields in likert:1932
+You've used 3 entries,
             5283 wiz_defined-function locations,
-            1225 strings with 14252 characters,
-and the built_in function-call counts, 1155 in all, are:
-= -- 187
-> -- 28
+            1237 strings with 14592 characters,
+and the built_in function-call counts, 3013 in all, are:
+= -- 437
+> -- 89
 < -- 0
-+ -- 9
-- -- 12
-* -- 58
-:= -- 108
-add.period$ -- 5
-call.type$ -- 1
-change.case$ -- 6
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 85
-empty$ -- 61
-format.name$ -- 15
-if$ -- 296
++ -- 29
+- -- 33
+* -- 171
+:= -- 299
+add.period$ -- 15
+call.type$ -- 3
+change.case$ -- 20
+chr.to.int$ -- 3
+cite$ -- 7
+duplicate$ -- 251
+empty$ -- 178
+format.name$ -- 39
+if$ -- 773
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 41
-num.names$ -- 6
-pop$ -- 27
+missing$ -- 13
+newline$ -- 54
+num.names$ -- 18
+pop$ -- 102
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 32
 quote$ -- 0
-skip$ -- 28
+skip$ -- 69
 stack$ -- 0
-substring$ -- 89
-swap$ -- 11
+substring$ -- 228
+swap$ -- 25
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 9
-warning$ -- 0
-while$ -- 9
+type$ -- 27
+warning$ -- 4
+while$ -- 21
 width$ -- 0
-write$ -- 46
+write$ -- 71
+(There were 4 warnings)
