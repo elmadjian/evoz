@@ -73,12 +73,12 @@
 % "\documentclass[chi_draft]{sigchi}". You can then place todo notes
 % by using the "\todo{...}"  command. Make sure to disable the draft
 % option again before submitting your final document.
-\usepackage{todonotes}
+% \usepackage{todonotes}
 
 % Paper metadata (use plain text, for PDF inclusion and later
 % re-using, if desired).  Use \emtpyauthor when submitting for review
 % so you remain anonymous.
-\def\plaintitle{Melhorando a qualidade de decisões colaborativas para cidades inteligentes}
+\def\plaintitle{Melhorando a qualidade de decisões colaborativas para uma cidade inteligente}
 \def\plainauthor{Carlos Elmadjian, Tarcisio Pereira}
 \def\emptyauthor{}
 \def\plainkeywords{escrever; aqui; obrigatório}
@@ -205,37 +205,23 @@
 
 
 
-%\begin{figure*}
-%  \centering
-%  \includegraphics[width=1.75\columnwidth]{figures/map}
-%  \caption{In this image, the map maximizes use of space. You can make
-%    figures as wide as you need, up to a maximum of the full width of
-%    both columns. Note that \LaTeX\ tends to render large figures on a
-%    dedicated page. Image: \ccbynd~ayman on
-%    Flickr.}~\label{fig:figure2}
-%\end{figure*}
-
-\section{Materiais e métodos}
-Os protótipos da ferramenta \textit{e-Voz} foram desenvolvidos utilizando as tecnologias HTML5, JavaScript e CSS3, sendo posteriormente compilados para a plataforma Android por meio do \textit{framework} Apache Cordova. Para o experimento com usuários, foi utilizado um aparelho Motorola Moto G Dual SIM, com uma tela de 4,5 polegadas.
-
-\subsection{Design experimental}
-Para a verificação da hipótese aventada na Introdução, propusemos um teste A/B com os participantes entre os dois protótipos investigados, de modo que a única diferença visual entre ambos era o botão adicional de recursos estatísticos, presente na segunda versão [FIGURA X]. Desse modo, procurou-se minimizar a possibilidade de que outras variáveis relativas ao experimento tivessem algum impacto deletério sobre os resultados.
-
-No teste proposto, os indivíduos deveriam completar a mesma tarefa com cada versão. Para reduzir vieses experimentais relativos ao aprendizado da tarefa, dividimos aleatoriamente os participantes em dois grupos: no primeiro, os indivíduos inciavam o experimento com o protótipo I e depois com o II, enquanto no segundo a ordem foi invertida. Ao final de cada tarefa, solicitava-se ao participante que respondesse a um questionário [TABELA X] com quatro questões cujas respostas foram dispostas em uma escala de Likert de cinco níveis~\cite{likert:1932}, com o intuito de verificar qual a experiência de usuário obtida.
-
-Optou-se por realizar uma investigação inteiramente intra-sujeito e sem comparação com outras ferramentas equivalentes, a fim eliminar o viés de confirmação tipicamente presente em experimentos dessa natureza~\cite{dell:2012}. Após a conclusão das tarefas, uma entrevista semiestruturada deveria se realizada com cada participante a fim de identificar o cumprimento ou não de critérios de usabilidade, registrar os sentimentos relatados, investigar eventuais mudanças de comportamento na interação com cada protótipo e coletar opiniões gerais sobre a ferramenta.
-
-\subsection{Protocolo experimental}
-Todos os participantes se sujeitaram ao experimento em ambientes naturais. Ao ser abordado, o voluntário recebia informações sobre natureza da investigação, a garantia do experimentador de que todas as informações colhidas seriam confidenciais e o compromisso de que ele poderia desistir do experimento a qualquer momento que desejasse.
-
-Uma vez de acordada sua participação, o experimentador exibia ao voluntário um dos protótipos da ferramenta \textit{e-Voz}, mostrando todas as suas telas e recursos interativos para que o participante pudesse se familiarizar com o aplicativo. Durante essa etapa, ele também era instruído sobre o contexto em que estava inserida a ferramenta e qual seria a natureza da tarefa requisitada, isto é, definir cinco problemas como prioritários dentre os 15 dispostos sobre o mapa do aplicativo com o intuito de auxiliar a Prefeitura de São Paulo na alocação de recursos públicos, utilizando ou não o recurso de auxílio estatístico (no caso da versão II).
-
-Enquanto o usuário selecionava os problemas que na sua opinião eram prioritários, o experimentador cronometrava o tempo gasto com a tarefa. Finda essa etapa, o participante recebia o questionário [XXX], para o qual lhe era informado explicitamente de que não havia tempo máximo para conclusão. Em seguida, a outra versão do protótipo lhe era apresentada, ressaltando a principal diferença em comparação com a anterior, e lhe era requisitado que selecionasse os cinco problemas prioritários. Novamente, a tarefa era cronometrada e, ao seu término, o mesmo questionário [XXX] era aplicado.
-
-Concluída essa etapa, o experimentador solicitava ao participante mais alguns minutos para responder perguntas sobre a sua experiência com os protótipos. Durante a entrevista, foram feitas algumas questões abertas pré-definidas ao usuário [TABELA XXXX], bem como outras perguntas que o experimentador julgasse pertinente no contexto, tanto para clarificar uma resposta dada quanto para dirimir dúvidas sobre eventuais incoerências entre o comportamento observado pelo experimentador e o relatado pelo participante.
+\begin{figure*}
+  \centering
+  \includegraphics[width=1.75\columnwidth]{figures/map}
+  \caption{In this image, the map maximizes use of space. You can make
+    figures as wide as you need, up to a maximum of the full width of
+    both columns. Note that \LaTeX\ tends to render large figures on a
+    dedicated page. Image: \ccbynd~ayman on
+    Flickr.}~\label{fig:figure2}
+\end{figure*}
 
 
-
+\section{Protocolo experimental}
+- planejamento das atividades\\
+- como as pessoas foram abordadas\\
+- locais de realização do experimento\\
+- descrição dos procedimentos, incluindo imagens das telas mostrando os procedimentos\\
+- justificativa dos procedimentos\\
 
 
 \section{Resultados}
@@ -250,7 +236,10 @@ Os dados reforçam a hipótese do viés de disponibilidade~\cite{tversky:1973} n
 
 \section{Limitações e trabalho futuro}
 - quantidade de participantes\\
-- avaliação de outros fatures que contribuem para a interação colaborativa (rede social, por exemplo)
+- utilizar meios e equipamentos informáticos faz que apenas parte da população, que tem acesso à essas tecnologias, possa contribuir, não abrangindo toda a população da cidade\\
+- avaliação de outros fatures que contribuem para a interação colaborativa (rede social, por exemplo)\\
+- avaliar se os recursos de gamification estimulam o usuário a usar mais a aplicação, e se em conjunto com a característica de rede social a aplicação continua sendo para resolver problemas da cidade ou se o propósito inicial se torna vago\\
+- O quanto que essa mudança realmente impacta apenas será possível analisar com o tempo e a real implementação.
 
 \section{Conclusão}
 - oferecer recursos para melhora de decisão em plataformas colaborativas sem onerar a usabilidade de interfaces pode inicialmente ser um desafio, mas os efeitos aparentes tanto na qualidade da interação (percepção dos usuários) quanto na utilidade e resultados indicam um benefício significativo.
