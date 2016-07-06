@@ -32,12 +32,52 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem{carter:2005}
+{Lemuria Carter} {and} {France B{\'e}langer}. 2005.
+\newblock \showarticletitle{The utilization of e-government services: citizen
+  trust, innovation and acceptance factors}.
+\newblock {\em Information systems journal\/} {15}, 1 (2005), 5--25.
+\newblock
+
+
+\bibitem{cidadera:2016}
+{Cidadera}. 2016.
+\newblock   (5 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://cidadera.com}.}
+
+
+\bibitem{colab:2016}
+{Colab}. 2016.
+\newblock   (5 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://www.colab.re}.}
+
+
 \bibitem{dell:2012}
 {Nicola Dell}, {Vidya Vaidyanathan}, {Indrani Medhi}, {Edward Cutrell}, {and}
   {William Thies}. 2012.
 \newblock \showarticletitle{Yours is better!: participant response bias in
   HCI}. In {\em Proceedings of the SIGCHI Conference on Human Factors in
   Computing Systems}. ACM, 1321--1330.
+\newblock
+
+
+\bibitem{irvin:2004}
+{Renee~A Irvin} {and} {John Stansbury}. 2004.
+\newblock \showarticletitle{Citizen participation in decision making: is it
+  worth the effort?}
+\newblock {\em Public administration review\/} {64}, 1 (2004), 55--65.
+\newblock
+
+
+\bibitem{layne:2001}
+{Karen Layne} {and} {Jungwoo Lee}. 2001.
+\newblock \showarticletitle{Developing fully functional E-government: A four
+  stage model}.
+\newblock {\em Government information quarterly\/} {18}, 2 (2001), 122--136.
 \newblock
 
 
@@ -48,11 +88,46 @@
 \newblock
 
 
+\bibitem{schuurman:2012}
+{Dimitri Schuurman}, {Bastiaan Baccarne}, {Lieven De~Marez}, {and} {Peter
+  Mechant}. 2012.
+\newblock \showarticletitle{Smart ideas for smart cities: investigating
+  crowdsourcing for generating and selecting ideas for ICT innovation in a city
+  context}.
+\newblock {\em Journal of theoretical and applied electronic commerce
+  research\/} {7}, 3 (2012), 49--62.
+\newblock
+
+
+\bibitem{tat:2002}
+{Alfred Tat-Kei~Ho}. 2002.
+\newblock \showarticletitle{Reinventing local governments and the e-government
+  initiative}.
+\newblock {\em Public administration review\/} {62}, 4 (2002), 434--444.
+\newblock
+
+
 \bibitem{tversky:1973}
 {Amos Tversky} {and} {Daniel Kahneman}. 1973.
 \newblock \showarticletitle{Availability: A heuristic for judging frequency and
   probability}.
 \newblock {\em Cognitive psychology\/} {5}, 2 (1973), 207--232.
+\newblock
+
+
+\bibitem{urbotip:2016}
+{Urbotip}. 2016.
+\newblock   (5 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://www.urbotip.com}.}
+
+
+\bibitem{zambonelli:2011}
+{Franco Zambonelli}. 2011.
+\newblock \showarticletitle{Pervasive urban crowdsourcing: Visions and
+  challenges}. In {\em Pervasive Computing and Communications Workshops (PERCOM
+  Workshops), 2011 IEEE International Conference on}. IEEE, 578--583.
 \newblock
 
 

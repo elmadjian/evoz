@@ -10,45 +10,47 @@ Warning--empty publisher in dell:2012
 Warning--empty address in dell:2012
 Warning--no number and no volume in likert:1932
 Warning--page numbers missing in both pages and numpages fields in likert:1932
-You've used 3 entries,
+Warning--empty publisher in zambonelli:2011
+Warning--empty address in zambonelli:2011
+You've used 12 entries,
             5283 wiz_defined-function locations,
-            1237 strings with 14592 characters,
-and the built_in function-call counts, 3013 in all, are:
-= -- 437
-> -- 89
+            1290 strings with 15854 characters,
+and the built_in function-call counts, 10522 in all, are:
+= -- 1562
+> -- 286
 < -- 0
-+ -- 29
-- -- 33
-* -- 171
-:= -- 299
-add.period$ -- 15
-call.type$ -- 3
-change.case$ -- 20
-chr.to.int$ -- 3
-cite$ -- 7
-duplicate$ -- 251
-empty$ -- 178
-format.name$ -- 39
-if$ -- 773
++ -- 85
+- -- 111
+* -- 587
+:= -- 1063
+add.period$ -- 60
+call.type$ -- 12
+change.case$ -- 71
+chr.to.int$ -- 12
+cite$ -- 18
+duplicate$ -- 897
+empty$ -- 647
+format.name$ -- 129
+if$ -- 2725
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 13
-newline$ -- 54
-num.names$ -- 18
-pop$ -- 102
+missing$ -- 38
+newline$ -- 119
+num.names$ -- 72
+pop$ -- 349
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 119
 quote$ -- 0
-skip$ -- 69
+skip$ -- 249
 stack$ -- 0
-substring$ -- 228
-swap$ -- 25
+substring$ -- 829
+swap$ -- 88
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 27
-warning$ -- 4
-while$ -- 21
+type$ -- 108
+warning$ -- 6
+while$ -- 90
 width$ -- 0
-write$ -- 71
-(There were 4 warnings)
+write$ -- 188
+(There were 6 warnings)
