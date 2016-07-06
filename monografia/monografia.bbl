@@ -32,6 +32,15 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem{brabham:2008}
+{Daren~C Brabham}. 2008.
+\newblock \showarticletitle{Crowdsourcing as a model for problem solving an
+  introduction and cases}.
+\newblock {\em Convergence: the international journal of research into new
+  media technologies\/} {14}, 1 (2008), 75--90.
+\newblock
+
+
 \bibitem{carter:2005}
 {Lemuria Carter} {and} {France B{\'e}langer}. 2005.
 \newblock \showarticletitle{The utilization of e-government services: citizen
@@ -54,6 +63,21 @@
 \newblock
 \newblock
 \shownote{\\\url{http://www.colab.re}.}
+
+
+\bibitem{cordova:2016}
+{Apache Cordova}. 2016.
+\newblock   (4 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://cordova.apache.org}.}
+
+
+\bibitem{colab_recife:2016}
+{Prefeitura de Recife}.
+\newblock Prefeitura de Recife adere à plataforma Colab.re.
+\newblock   (21 de março de ????).
+\newblock
 
 
 \bibitem{dell:2012}
@@ -99,6 +123,22 @@
 \newblock
 
 
+\bibitem{slater:2007}
+{Michael~D Slater}. 2007.
+\newblock \showarticletitle{Reinforcing spirals: The mutual influence of media
+  selectivity and media effects and their impact on individual behavior and
+  social identity}.
+\newblock {\em Communication Theory\/} {17}, 3 (2007), 281--303.
+\newblock
+
+
+\bibitem{surowiecki:2005}
+{James Surowiecki}. 2005.
+\newblock {\em The wisdom of crowds}.
+\newblock Anchor.
+\newblock
+
+
 \bibitem{tat:2002}
 {Alfred Tat-Kei~Ho}. 2002.
 \newblock \showarticletitle{Reinventing local governments and the e-government
@@ -112,6 +152,13 @@
 \newblock \showarticletitle{Availability: A heuristic for judging frequency and
   probability}.
 \newblock {\em Cognitive psychology\/} {5}, 2 (1973), 207--232.
+\newblock
+
+
+\bibitem{tversky:1986}
+{Amos Tversky} {and} {Daniel Kahneman}. 1986.
+\newblock \showarticletitle{Rational choice and the framing of decisions}.
+\newblock {\em Journal of business\/} (1986), S251--S278.
 \newblock
 
 

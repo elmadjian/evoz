@@ -5,52 +5,59 @@ The style file: SIGCHI-Reference-Format.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Database file #1: sample.bib
+"{" immediately follows a field name---line 306 of file sample.bib
+ :  year
+ :      {2016},
+I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=8) to 100 items from 50.
+Warning--empty year in colab_recife:2016
 Warning--empty publisher in dell:2012
 Warning--empty address in dell:2012
 Warning--no number and no volume in likert:1932
 Warning--page numbers missing in both pages and numpages fields in likert:1932
+Warning--empty address in surowiecki:2005
+Warning--no number and no volume in tversky:1986
 Warning--empty publisher in zambonelli:2011
 Warning--empty address in zambonelli:2011
-You've used 12 entries,
+You've used 18 entries,
             5283 wiz_defined-function locations,
-            1290 strings with 15854 characters,
-and the built_in function-call counts, 10522 in all, are:
-= -- 1562
-> -- 286
+            1325 strings with 16610 characters,
+and the built_in function-call counts, 15064 in all, are:
+= -- 2237
+> -- 389
 < -- 0
-+ -- 85
-- -- 111
-* -- 587
-:= -- 1063
-add.period$ -- 60
-call.type$ -- 12
-change.case$ -- 71
-chr.to.int$ -- 12
-cite$ -- 18
-duplicate$ -- 897
-empty$ -- 647
-format.name$ -- 129
-if$ -- 2725
++ -- 111
+- -- 153
+* -- 811
+:= -- 1537
+add.period$ -- 91
+call.type$ -- 18
+change.case$ -- 102
+chr.to.int$ -- 18
+cite$ -- 27
+duplicate$ -- 1296
+empty$ -- 939
+format.name$ -- 174
+if$ -- 3905
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 38
-newline$ -- 119
-num.names$ -- 72
-pop$ -- 349
+missing$ -- 52
+newline$ -- 162
+num.names$ -- 108
+pop$ -- 509
 preamble$ -- 1
-purify$ -- 119
+purify$ -- 174
 quote$ -- 0
-skip$ -- 249
+skip$ -- 358
 stack$ -- 0
-substring$ -- 829
-swap$ -- 88
+substring$ -- 1198
+swap$ -- 126
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
-warning$ -- 6
-while$ -- 90
+type$ -- 158
+warning$ -- 9
+while$ -- 135
 width$ -- 0
-write$ -- 188
-(There were 6 warnings)
+write$ -- 265
+(There was 1 error message)
