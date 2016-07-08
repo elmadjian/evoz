@@ -41,6 +41,14 @@
 \newblock
 
 
+\bibitem{brabham:2009}
+{Daren~C Brabham}. 2009.
+\newblock \showarticletitle{Crowdsourcing the public participation process for
+  planning projects}.
+\newblock {\em Planning Theory\/} {8}, 3 (2009), 242--262.
+\newblock
+
+
 \bibitem{carter:2005}
 {Lemuria Carter} {and} {France B{\'e}langer}. 2005.
 \newblock \showarticletitle{The utilization of e-government services: citizen
@@ -137,7 +145,16 @@
 \newblock   (4 de julho de 2016).
 \newblock
 \newblock
-\shownote{\\\url{https://developers.google.com/maps/}.}
+\shownote{\\\url{https://developers.google.com/maps}.}
+
+
+\bibitem{nam:2011}
+{Taewoo Nam} {and} {Theresa~A Pardo}. 2011.
+\newblock \showarticletitle{Conceptualizing smart city with dimensions of
+  technology, people, and institutions}. In {\em Proceedings of the 12th Annual
+  International Digital Government Research Conference: Digital Government
+  Innovation in Challenging Times}. ACM, 282--291.
+\newblock
 
 
 \bibitem{schuurman:2012}

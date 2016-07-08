@@ -14,50 +14,52 @@ Warning--empty publisher in hamari:2014
 Warning--empty address in hamari:2014
 Warning--no number and no volume in likert:1932
 Warning--page numbers missing in both pages and numpages fields in likert:1932
+Warning--empty publisher in nam:2011
+Warning--empty address in nam:2011
 Warning--empty address in surowiecki:2005
 Warning--no number and no volume in thoits:2001
 Warning--no number and no volume in tversky:1986
 Warning--empty publisher in zambonelli:2011
 Warning--empty address in zambonelli:2011
-You've used 22 entries,
+You've used 24 entries,
             5283 wiz_defined-function locations,
-            1345 strings with 17399 characters,
-and the built_in function-call counts, 18603 in all, are:
-= -- 2675
-> -- 500
+            1356 strings with 17787 characters,
+and the built_in function-call counts, 20553 in all, are:
+= -- 2955
+> -- 543
 < -- 0
-+ -- 144
-- -- 192
-* -- 1031
-:= -- 1912
-add.period$ -- 112
-call.type$ -- 22
-change.case$ -- 128
-chr.to.int$ -- 22
-cite$ -- 35
-duplicate$ -- 1625
-empty$ -- 1172
-format.name$ -- 222
-if$ -- 4775
++ -- 156
+- -- 210
+* -- 1131
+:= -- 2101
+add.period$ -- 122
+call.type$ -- 24
+change.case$ -- 139
+chr.to.int$ -- 24
+cite$ -- 39
+duplicate$ -- 1810
+empty$ -- 1301
+format.name$ -- 243
+if$ -- 5284
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 66
-newline$ -- 191
-num.names$ -- 132
-pop$ -- 641
+missing$ -- 75
+newline$ -- 204
+num.names$ -- 144
+pop$ -- 711
 preamble$ -- 1
-purify$ -- 216
+purify$ -- 235
 quote$ -- 0
-skip$ -- 449
+skip$ -- 501
 stack$ -- 0
-substring$ -- 1494
-swap$ -- 156
+substring$ -- 1669
+swap$ -- 177
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 194
-warning$ -- 13
-while$ -- 162
+type$ -- 212
+warning$ -- 15
+while$ -- 180
 width$ -- 0
-write$ -- 320
-(There were 13 warnings)
+write$ -- 346
+(There were 15 warnings)
