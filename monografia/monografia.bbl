@@ -74,10 +74,13 @@
 
 
 \bibitem{colab_recife:2016}
-{Prefeitura de Recife}.
+{Prefeitura de Recife}. 2016.
 \newblock Prefeitura de Recife adere à plataforma Colab.re.
-\newblock   (21 de março de ????).
+\newblock   (21 de março de 2016).
 \newblock
+\newblock
+\shownote{\\\url{http://www2.recife.pe.gov.br/noticias/21/03/2016/prefeitura-do-recife-adere-plataforma-colabre}.
+  Acessado em 06/07/2016.}
 
 
 \bibitem{dell:2012}
@@ -86,6 +89,23 @@
 \newblock \showarticletitle{Yours is better!: participant response bias in
   HCI}. In {\em Proceedings of the SIGCHI Conference on Human Factors in
   Computing Systems}. ACM, 1321--1330.
+\newblock
+
+
+\bibitem{deterding:2011}
+{Sebastian Deterding}, {Dan Dixon}, {Rilla Khaled}, {and} {Lennart Nacke}.
+  2011.
+\newblock \showarticletitle{From game design elements to gamefulness: defining
+  gamification}. In {\em Proceedings of the 15th international academic
+  MindTrek conference: Envisioning future media environments}. ACM, 9--15.
+\newblock
+
+
+\bibitem{hamari:2014}
+{Juho Hamari}, {Jonna Koivisto}, {and} {Harri Sarsa}. 2014.
+\newblock \showarticletitle{Does gamification work?--a literature review of
+  empirical studies on gamification}. In {\em 2014 47th Hawaii International
+  Conference on System Sciences}. IEEE, 3025--3034.
 \newblock
 
 
@@ -110,6 +130,14 @@
 \newblock \showarticletitle{A technique for the measurement of attitudes.}
 \newblock {\em Archives of psychology\/} (1932).
 \newblock
+
+
+\bibitem{googlemaps:2016}
+{Google Maps}. 2016.
+\newblock   (4 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{https://developers.google.com/maps/}.}
 
 
 \bibitem{schuurman:2012}
@@ -144,6 +172,13 @@
 \newblock \showarticletitle{Reinventing local governments and the e-government
   initiative}.
 \newblock {\em Public administration review\/} {62}, 4 (2002), 434--444.
+\newblock
+
+
+\bibitem{thoits:2001}
+{Peggy~A Thoits} {and} {Lyndi~N Hewitt}. 2001.
+\newblock \showarticletitle{Volunteer work and well-being}.
+\newblock {\em Journal of health and social behavior\/} (2001), 115--131.
 \newblock
 
 
