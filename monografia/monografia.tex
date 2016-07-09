@@ -155,7 +155,8 @@
   Este é um resumo falso que contém 150 palavras. Por favor, substitua este resumo assim que você puder e tiver uma ideia melhor do que escrever aqui. Este é um resumo falso que contém 150 palavras. Por favor, substitua este resumo assim que você puder e tiver uma ideia melhor do que escrever aqui. Este é um resumo falso que contém 150 palavras. Por favor, substitua este resumo assim que você puder e tiver uma ideia melhor do que escrever aqui. Este é um resumo falso que contém 150 palavras. Por favor, substitua este resumo assim que você puder e tiver uma ideia melhor do que escrever aqui. Este é um resumo falso que contém 150 palavras. Por favor, substitua este resumo assim que você puder e tiver uma ideia melhor do que escrever aqui. Este é um resumo falso que contém 150 palavras. 
 \end{abstract}
 
-\category{H.1.2.}{User/Machine Systems}{Human factors}
+%\category{H.1.2.}{User/Machine Systems}{Human factors}
+\category{H.5.2.}{User Interfaces}{Evaluation/methodology; Prototyping}
 \keywords{\plainkeywords}
 
 \section{Introdução}
@@ -181,64 +182,35 @@ Outro problema é que o ambiente de participação em tecnologias emergentes com
 Desse cenário decorre ainda uma outra questão pertinente à área de Interação Humano-Computador, que é a criação de um vínculo emocionalmente negativo na interação entre os usuários e os aplicativos do gênero. Muitos indivíduos recorrem a essas ferramentas como uma válvula de escape para frustrações com a cidade e os representantes públicos. Já os eventuais relacionamentos entre os usuários nas plataformas acaba por estimular uma espiral de negatividade~\cite{slater:2007} sobre as questões municipais. Uma das possíveis consequências disso é a proliferação de tomadas de decisão de baixa qualidade, caracterizadas pela celeridade e forte conteúdo emocional, no lugar de critérios racionais de utilidade~\cite{tversky:1986}.
 
 \begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/sigchi-logo}
-  \caption{Insert a caption below each figure. Do not alter the
-    Caption style.  One-line captions should be centered; multi-line
-    should be justified. }~\label{fig:figure1}
+	\centering
+	\includegraphics[width=1.0\columnwidth]{figures/prototipo1a}
+	\caption{Demonstração do processo de escolha dos problemas prioritários: o usuário seleciona um \textit{pin} no mapa e usa uma das suas estrelas disponíveis (canto esquerdo superior) para marcar o problema. }~\label{fig:figure1}
 \end{figure}
-
-
-\begin{table}
-  \centering
-  \begin{tabular}{l r r r}
-    % \toprule
-    & & \multicolumn{2}{c}{\small{\textbf{Test Conditions}}} \\
-    \cmidrule(r){3-4}
-    {\small\textit{Name}}
-    & {\small \textit{First}}
-      & {\small \textit{Second}}
-    & {\small \textit{Final}} \\
-    \midrule
-    Marsden & 223.0 & 44 & 432,321 \\
-    Nass & 22.2 & 16 & 234,333 \\
-    Borriello & 22.9 & 11 & 93,123 \\
-    Karat & 34.9 & 2200 & 103,322 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{Table captions should be placed below the table. We
-    recommend table lines be 1 point, 25\% black. Minimize use of
-    table grid lines.}~\label{tab:table1}
-\end{table}
-
 
 \section{A ferramenta e-Voz}
 Para investigar se com alterações em recursos interativos é possível identificar melhorias na qualidade das decisões colaborativas e no vínculo afetivo do usuário com aplicações do gênero, desenvolvemos o conceito de um aplicativo denominado \textit{e-Voz}, capaz de emular tarefas semelhantes àquelas propostas pelas ferramentas supracitadas.
 
 A ideia por trás do \textit{e-Voz} é oferecer uma plataforma que em termos funcionais seja indistinta das demais, mas que do ponto de vista da experiência de usuário possa fomentar a participação, sentimentos positivos e a conscientização sobre os problemas da cidade, na expectativa de que com essa nova experiência o usuário possa alterar seu padrão convencional de interação com ferramentas do gênero, estabelecendo um comportamento colaborativo com o município.
 
-Por isso, na tela que exibe o mapa dos problemas urbanos, há um destaque para o recurso de escolher incidentes que devem ser resolvidos mais rapidamente pela Prefeitura [FIGURA XXX]. A ideia é que o usuário se sinta um agente participativo na resolução dessas questões e não um mero fiador de reclamações. Para auxiliá-lo na tomada de decisão, adicionamos um botão que exibe algumas estatísticas fictícias sobre a cidade [FIGURA XXXX], um recurso ausente em outras ferramentas similares.
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\columnwidth]{figures/prototipo2b}
+	\caption{Ao selecionar o botão de auxílio com dados estatísticos, três opções de camadas de dados sobre o mapa se tornam disponíveis: frequência de ocorrências reportadas nos últimos seis meses, taxa de resolução dos problemas pela Prefeitura de São Paulo e distribuição de renda familiar (tela à direita).  }~\label{fig:figure2}
+\end{figure}
 
-Para o estimular participação dos usuários, procuramos também utilizar técnicas de gamificação~\cite{deterding:2011}, como um \textit{ranking} dos membros mais colaborativos [FIGURA XXXXX], inserção de insígnias e troféus, com o cuidado de não salientar a competitividade, mas a colaboração entre os usuários. Contudo, para o escopo inicial do trabalho, procuramos investigar apenas os aspectos afetivos da interação e suas consequências na qualidade das decisões. Dois protótipos distintos baseados no conceito proposto foram desenvolvidos para esse fim.
+Por isso, na tela que exibe o mapa dos problemas urbanos, há um destaque para o recurso de escolher incidentes que devem ser resolvidos mais rapidamente pela Prefeitura (Figura~\ref{fig:figure1}). A ideia é que o usuário se sinta um agente participativo na resolução dessas questões e não um mero fiador de reclamações. Para auxiliá-lo na tomada de decisão, adicionamos um botão que exibe algumas estatísticas fictícias sobre a cidade (Figura~\ref{fig:figure2}), um recurso ausente em outras ferramentas similares.
 
 
-%\begin{figure*}
-%  \centering
-%  \includegraphics[width=1.75\columnwidth]{figures/map}
-%  \caption{In this image, the map maximizes use of space. You can make
-%    figures as wide as you need, up to a maximum of the full width of
-%    both columns. Note that \LaTeX\ tends to render large figures on a
-%    dedicated page. Image: \ccbynd~ayman on
-%    Flickr.}~\label{fig:figure2}
-%\end{figure*}
+Para o estimular participação dos usuários, procuramos também utilizar técnicas de gamificação~\cite{deterding:2011}, como um \textit{ranking} dos membros mais colaborativos, inserção de insígnias e troféus, com o cuidado de não salientar a competitividade, mas a colaboração entre os usuários. Contudo, para o escopo inicial do trabalho, procuramos investigar apenas os aspectos afetivos da interação e suas consequências na qualidade das decisões. Dois protótipos distintos baseados no conceito proposto foram desenvolvidos para esse fim.
+
 
 \section{Materiais e métodos}
 Os protótipos da ferramenta \textit{e-Voz} foram desenvolvidos utilizando as tecnologias HTML5, JavaScript, CSS3 e a \textit{Application Programming Interface} (API) para mapas do Google~\cite{googlemaps:2016}, sendo posteriormente compilados para a plataforma Android por meio do \textit{framework} Apache Cordova~\cite{cordova:2016}. Para o experimento com usuários, foi utilizado um aparelho Motorola Moto G Dual SIM, com uma tela de 4,5 polegadas.
 
 \subsection{Design experimental}
-Para a investigação aventada na seção anterior, propusemos um teste A/B com os participantes entre os dois protótipos investigados, de modo que a única diferença visual entre ambos era o botão adicional de recursos estatísticos, presente na segunda versão [FIGURA X]. Desse modo, procurou-se minimizar a possibilidade de que outras variáveis relativas ao experimento tivessem algum impacto deletério sobre os resultados.
+Para a investigação aventada na seção anterior, propusemos um teste A/B com os participantes entre os dois protótipos investigados, de modo que a única diferença visual entre ambos era o botão adicional de recursos estatísticos, presente na segunda versão (conf. Figura~\ref{fig:figure1} e Figura~\ref{fig:figure2}). Desse modo, procurou-se minimizar a possibilidade de que outras variáveis relativas ao experimento tivessem algum impacto deletério sobre os resultados.
 
-No teste proposto, os indivíduos deveriam completar a mesma tarefa com cada versão. Para reduzir vieses experimentais relativos ao aprendizado da tarefa, dividimos aleatoriamente os participantes em dois grupos: no primeiro, os indivíduos inciavam o experimento com o protótipo I e depois com o II, enquanto no segundo a ordem foi invertida. Ao final de cada tarefa, solicitava-se ao participante que respondesse a um questionário [TABELA X] com quatro questões cujas respostas foram dispostas em uma escala de Likert de cinco níveis~\cite{likert:1932}, com o intuito de verificar qual a experiência de usuário obtida.
+No teste proposto, os indivíduos deveriam completar a mesma tarefa com cada versão. Para reduzir vieses experimentais relativos ao aprendizado da tarefa, dividimos aleatoriamente os participantes em dois grupos: no primeiro, os indivíduos inciavam o experimento com o protótipo I e depois com o II, enquanto no segundo a ordem foi invertida. Ao final de cada tarefa, solicitava-se ao participante que respondesse a um questionário com quatro questões cujas respostas foram dispostas em uma escala de Likert de cinco níveis, com o intuito de verificar qual a experiência de usuário obtida.
 
 Optou-se por realizar uma investigação inteiramente intra-sujeito e sem comparação com outras ferramentas equivalentes, a fim eliminar o viés de confirmação tipicamente presente em experimentos dessa natureza~\cite{dell:2012}. Após a conclusão das tarefas, uma entrevista semiestruturada deveria se realizada com cada participante a fim de identificar o cumprimento ou não de critérios de usabilidade, registrar os sentimentos relatados, investigar eventuais mudanças de comportamento na interação com cada protótipo e coletar opiniões gerais sobre a ferramenta.
 
@@ -249,16 +221,36 @@ Uma vez de acordada sua participação, o experimentador exibia ao voluntário u
 
 Havia cinco categorias diferentes de problemas e eles foram distribuídos sobre o mapa de modo que houvesse pelo menos um de cada tipo em áreas menos assistidas pelo poder público --- segundo as estatísticas fornecidas. O objetivo dessa configuração era salientar a existência de opções administrativamente mais justas do que outras.
 
-Enquanto o usuário selecionava os problemas que na sua opinião eram prioritários, o experimentador cronometrava o tempo gasto com a tarefa. Finda essa etapa, o participante recebia o questionário [XXX], para o qual lhe era informado explicitamente de que não havia tempo máximo para conclusão. Em seguida, a outra versão do protótipo lhe era apresentada, ressaltando a principal diferença em comparação com a anterior e, novamente, o usuário era instruído a realizar a mesma tarefa, que era cronometrada e, ao seu término, o mesmo questionário [XXX] era aplicado.
+Enquanto o usuário selecionava os problemas que na sua opinião eram prioritários, o experimentador cronometrava o tempo gasto com a tarefa. Finda essa etapa, o participante recebia o questionário, para o qual lhe era informado explicitamente de que não havia tempo máximo para conclusão. Em seguida, a outra versão do protótipo lhe era apresentada, ressaltando a principal diferença em comparação com a anterior e, novamente, o usuário era instruído a realizar a mesma tarefa, que era cronometrada e, ao seu término, o mesmo questionário era aplicado.
 
-Concluída essa etapa, o experimentador solicitava ao participante mais alguns minutos para responder perguntas sobre a sua experiência com os protótipos. Durante a entrevista, foram feitas algumas questões abertas pré-definidas ao usuário [TABELA XXXX], bem como outras perguntas que o experimentador julgasse pertinente no contexto, tanto para clarificar uma resposta dada quanto para dirimir dúvidas sobre eventuais incoerências entre o comportamento observado pelo experimentador e o relatado pelo participante.
-
+Concluída essa etapa, o experimentador solicitava ao participante mais alguns minutos para responder perguntas sobre a sua experiência com os protótipos. Durante a entrevista, foram feitas algumas questões abertas pré-definidas ao usuário, bem como outras perguntas que o experimentador julgasse pertinente no contexto, tanto para clarificar uma resposta dada quanto para dirimir dúvidas sobre eventuais incoerências entre o comportamento observado pelo experimentador e o relatado pelo participante.
 
 
 \section{Resultados}
 Participaram do experimento 11 voluntários --- oito homens e três mulheres --- todos entre 26 e 41 anos, sendo sete deles moradores da zona oeste da cidade de São Paulo. A ocupação predominante entre os participantes foi de estudante de ensino superior (cinco, ao todo). Para a condução do experimento, seis voluntários iniciaram primeiro sua interação com o protótipo I e depois com II, enquanto cinco procederam de forma inversa.
 
-A [TABELA XXX] condensa os principais resultados obtidos no experimento. De modo geral, a maioria dos participantes (72,7 \%) preferiu a versão II, cerca de 63,6 \% consideraram o recurso de auxílio útil à tarefa, nenhum participante considerou que esse recurso atrapalha a sua realização e, em média, uma quantidade de tempo significativamente maior de tempo foi gasta com a segunda versão.
+\begin{table}
+	\centering
+	\begin{tabular}{l r r}
+		% \toprule
+		\multicolumn{3}{c}{\small{\textbf{Resultados}}} \\
+		\midrule
+		{\small\textit{Métrica}}
+		& {\small \textit{Protótipo I}}
+		& {\small \textit{Protótipo II}} \\
+		\midrule
+		Tempo médio gasto no experimento & 145,8 s & 81,8 s\\
+		Facilidade de completar a tarefa & 90,9 \% & 63,6 \%\\
+		Sentimentos positivos com a tarefa & 81,8 \% & 90,9 \% \\
+		Sentiu-se envolvido com a cidade & 72,7 \% & 72,7 \%\\
+		Sentiu-se motivado a participar mais & 81,8 \% & 81,8 \%\\
+		Preferência de uso & 27,3 \% & 72,7 \%\\
+		% \bottomrule
+	\end{tabular}
+	\caption{Principais resultados quantizados colhidos a partir dos questionários e entrevista.}~\label{tab:table1}
+\end{table}
+
+A Tabela~\ref{tab:table1} condensa os principais resultados obtidos no experimento. De modo geral, a maioria dos participantes (72,7 \%) preferiu a versão II, cerca de 63,6 \% consideraram o recurso de auxílio útil à tarefa, nenhum participante considerou que esse recurso atrapalha a sua realização e, em média, uma quantidade de tempo significativamente maior de tempo foi gasta com a segunda versão.
 
 Em termos de comportamento, observou-se que os participantes mostraram uma tendência em priorizar a solução de problemas mais próximos à sua residência ou local de trabalho usando o protótipo I. Já entre os quatro voluntários que não verificaram utilidade no recurso de auxílio, três sequer interagiram com ele.
 
@@ -275,6 +267,8 @@ Não cabe ao escopo deste trabalho discutir as consequências sociais de decisõ
 
 \section{Limitações e trabalhos futuros}
 Não está claro ainda se a percepção de um comportamento solidário por parte dos usuários se deve à ordem com que os protótipos I e II foram apresentados. Entre aqueles que começaram pela segunda versão e utilizaram os dados estatísticos, não houve um juízo de altruísmo sobre a qualidade da decisão, embora esses participantes tenham reconhecido a utilidade do recurso de auxílio para a tarefa. Portanto, para dirimir dúvidas dessa natureza, é necessário um estudo com um número maior e mais heterogêneo de participantes.
+
+Ademais, o estudo esteve circunscrito à cidade de São Paulo, portanto é necessário verificar se variáveis regionais podem ter um peso significativo sobre os resultados observados. 
 
 É preciso também investigar outras características incutidas nos protótipos para melhorar a participação dos usuários, como os recursos de gamificação e elementos de rede social. Tal pesquisa é necessária, sobretudo, para verificar se esses recursos têm um efeito duradouro na aderência dos usuários à plataforma ou não, algo que não está claro na literatura~\cite{hamari:2014}.
 
