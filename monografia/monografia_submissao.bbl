@@ -1,0 +1,215 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem{brabham:2008}
+{Daren~C Brabham}. 2008.
+\newblock \showarticletitle{Crowdsourcing as a model for problem solving an
+  introduction and cases}.
+\newblock {\em Convergence: the international journal of research into new
+  media technologies\/} {14}, 1 (2008), 75--90.
+\newblock
+
+
+\bibitem{brabham:2009}
+{Daren~C Brabham}. 2009.
+\newblock \showarticletitle{Crowdsourcing the public participation process for
+  planning projects}.
+\newblock {\em Planning Theory\/} {8}, 3 (2009), 242--262.
+\newblock
+
+
+\bibitem{carter:2005}
+{Lemuria Carter} {and} {France B{\'e}langer}. 2005.
+\newblock \showarticletitle{The utilization of e-government services: citizen
+  trust, innovation and acceptance factors}.
+\newblock {\em Information systems journal\/} {15}, 1 (2005), 5--25.
+\newblock
+
+
+\bibitem{cidadera:2016}
+{Cidadera}. 2016.
+\newblock   (5 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://cidadera.com}.}
+
+
+\bibitem{colab:2016}
+{Colab}. 2016.
+\newblock   (5 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://www.colab.re}.}
+
+
+\bibitem{cordova:2016}
+{Apache Cordova}. 2016.
+\newblock   (4 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://cordova.apache.org}.}
+
+
+\bibitem{carvalho:2001}
+{Jos{\'e}~Murilo De~Carvalho}. 2001.
+\newblock {\em Cidadania no Brasil}.
+\newblock Civiliza{\c{c}}{\~a}o Brasileira.
+\newblock
+
+
+\bibitem{dell:2012}
+{Nicola Dell}, {Vidya Vaidyanathan}, {Indrani Medhi}, {Edward Cutrell}, {and}
+  {William Thies}. 2012.
+\newblock \showarticletitle{Yours is better!: participant response bias in
+  HCI}. In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}. ACM, 1321--1330.
+\newblock
+
+
+\bibitem{deterding:2011}
+{Sebastian Deterding}, {Dan Dixon}, {Rilla Khaled}, {and} {Lennart Nacke}.
+  2011.
+\newblock \showarticletitle{From game design elements to gamefulness: defining
+  gamification}. In {\em Proceedings of the 15th international academic
+  MindTrek conference: Envisioning future media environments}. ACM, 9--15.
+\newblock
+
+
+\bibitem{irvin:2004}
+{Renee~A Irvin} {and} {John Stansbury}. 2004.
+\newblock \showarticletitle{Citizen participation in decision making: is it
+  worth the effort?}
+\newblock {\em Public administration review\/} {64}, 1 (2004), 55--65.
+\newblock
+
+
+\bibitem{layne:2001}
+{Karen Layne} {and} {Jungwoo Lee}. 2001.
+\newblock \showarticletitle{Developing fully functional E-government: A four
+  stage model}.
+\newblock {\em Government information quarterly\/} {18}, 2 (2001), 122--136.
+\newblock
+
+
+\bibitem{googlemaps:2016}
+{Google Maps}. 2016.
+\newblock   (4 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{https://developers.google.com/maps}.}
+
+
+\bibitem{nam:2011}
+{Taewoo Nam} {and} {Theresa~A Pardo}. 2011.
+\newblock \showarticletitle{Conceptualizing smart city with dimensions of
+  technology, people, and institutions}. In {\em Proceedings of the 12th Annual
+  International Digital Government Research Conference: Digital Government
+  Innovation in Challenging Times}. ACM, 282--291.
+\newblock
+
+
+\bibitem{schuurman:2012}
+{Dimitri Schuurman}, {Bastiaan Baccarne}, {Lieven De~Marez}, {and} {Peter
+  Mechant}. 2012.
+\newblock \showarticletitle{Smart ideas for smart cities: investigating
+  crowdsourcing for generating and selecting ideas for ICT innovation in a city
+  context}.
+\newblock {\em Journal of theoretical and applied electronic commerce
+  research\/} {7}, 3 (2012), 49--62.
+\newblock
+
+
+\bibitem{slater:2007}
+{Michael~D Slater}. 2007.
+\newblock \showarticletitle{Reinforcing spirals: The mutual influence of media
+  selectivity and media effects and their impact on individual behavior and
+  social identity}.
+\newblock {\em Communication Theory\/} {17}, 3 (2007), 281--303.
+\newblock
+
+
+\bibitem{surowiecki:2005}
+{James Surowiecki}. 2005.
+\newblock {\em The wisdom of crowds}.
+\newblock Anchor.
+\newblock
+
+
+\bibitem{tat:2002}
+{Alfred Tat-Kei~Ho}. 2002.
+\newblock \showarticletitle{Reinventing local governments and the e-government
+  initiative}.
+\newblock {\em Public administration review\/} {62}, 4 (2002), 434--444.
+\newblock
+
+
+\bibitem{thoits:2001}
+{Peggy~A Thoits} {and} {Lyndi~N Hewitt}. 2001.
+\newblock \showarticletitle{Volunteer work and well-being}.
+\newblock {\em Journal of health and social behavior\/} (2001), 115--131.
+\newblock
+
+
+\bibitem{tversky:1973}
+{Amos Tversky} {and} {Daniel Kahneman}. 1973.
+\newblock \showarticletitle{Availability: A heuristic for judging frequency and
+  probability}.
+\newblock {\em Cognitive psychology\/} {5}, 2 (1973), 207--232.
+\newblock
+
+
+\bibitem{tversky:1986}
+{Amos Tversky} {and} {Daniel Kahneman}. 1986.
+\newblock \showarticletitle{Rational choice and the framing of decisions}.
+\newblock {\em Journal of business\/} (1986), S251--S278.
+\newblock
+
+
+\bibitem{urbotip:2016}
+{Urbotip}. 2016.
+\newblock   (5 de julho de 2016).
+\newblock
+\newblock
+\shownote{\\\url{http://www.urbotip.com}.}
+
+
+\bibitem{zambonelli:2011}
+{Franco Zambonelli}. 2011.
+\newblock \showarticletitle{Pervasive urban crowdsourcing: Visions and
+  challenges}. In {\em Pervasive Computing and Communications Workshops (PERCOM
+  Workshops), 2011 IEEE International Conference on}. IEEE, 578--583.
+\newblock
+
+
+\end{thebibliography}
